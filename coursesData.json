@@ -1,0 +1,15 @@
+{
+    "courses":[
+        {
+            "id":1,
+            "name":"100 Days of Code: the complete guide",
+            "instructor":"Angela Yu",
+            "image":"https://courselifetime.com/cdn/shop/products/100-days-of-code-2.jpg?v=1678433462&width=1445",
+            "categories":"Web Development",
+            "rating":"4.5",
+            "longDescription":"pla pla pla pla pla",
+            "userEnrolled":false
+        }
+        
+    ]
+}

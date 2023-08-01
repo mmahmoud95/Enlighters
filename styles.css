@@ -47,3 +47,60 @@ nav ul a {
 nav img{
     width: 25px;
 }
+
+
+/* Home Rules */
+main{
+padding: 2rem;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 1.3rem;
+    flex-wrap: wrap;
+}
+.card{
+    background-color: white;
+    width: 200px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.card:hover{
+    box-shadow: 1px 1px 2px 0px  gray;
+    transform: scale(1.1);
+}
+
+.card .img img {
+    width: 200px;
+    object-fit: cover;
+}
+.text{
+    padding:5px 10px;
+}
+.card h4{
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.details{
+    display: flex;
+    justify-content: space-between;
+}
+.details p:last-child{
+    color: orange;
+}
+.card p {
+    font-size: 10px;
+}
+
+.control{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.filter{
+    display: flex;
+    gap: 1rem;
+}
+
