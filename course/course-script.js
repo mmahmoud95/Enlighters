@@ -20,3 +20,5 @@ courseContainer.innerHTML = `
 </div>
 </div>
 `
+
+

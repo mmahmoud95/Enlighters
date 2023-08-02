@@ -1,56 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="./about-us-style.css" rel="stylesheet" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="icon" type="image/x-icon" href="/Assets/graduation-hat.png">
-        <title>Enlighters</title>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Indie+Flower&family=Roboto:wght@300;400&display=swap"
-            rel="stylesheet"
-        />
-        <title>Document</title>
-    </head>
-    <body>
-        <nav>
-            <h1>Enlighters.com</h1>
-            <ul>
-                <li>
-                    <a href="../">Home</a>
-                </li>
-                <li>
-                    <a href="#">My Courses</a>
-                </li>
-                <li>
-                    <a href="#">Exams</a>
-                </li>
-                <li>
-                    <a href="./about-us.html">about us</a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="../Assets/man.png" />
-                    </a>
-                </li>
-            </ul>
-        </nav>
-        <div class="header">
-            <div class="header-text">
-                <h1>
-                    The Best Tripe To Develope Yourself Of Course We Beside You.
-                </h1>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing
-                    elit.Cumque delectus earum iusto eligendi incidunt ab, error
-                    atque excepturi facilis laborum enim dolore officia
-                    doloribus velit, quia odit architecto nesciunt non. Lorem,
-                    ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-            </div>
-            <div></div>
-        </div>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./about-us-style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/x-icon" href="/Assets/graduation-hat.png" />
+    <title>Enlighters</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Indie+Flower&family=Roboto:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <p id="logo">Enlighters.com</p>
+      <ul>
+        <li>
+          <a href="../">Home</a>
+        </li>
+        <li>
+          <a href="#">My Courses</a>
+        </li>
+        <li>
+          <a href="#">Exams</a>
+        </li>
+        <li>
+          <a href="./about-us.html">about us</a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="../Assets/man.png" />
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div class="header">
+      <div class="header-text">
+        <h1>The Best Tripe To Develope Yourself Of Course We Beside You.</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.Cumque
+          delectus earum iusto eligendi incidunt ab, error atque excepturi
+          facilis laborum enim dolore officia doloribus velit, quia odit
+          architecto nesciunt non. Lorem, ipsum dolor sit amet consectetur
+          adipisicing elit.
+        </p>
+      </div>
+      <div></div>
+    </div>
+    <script>
+      var logo = document.getElementById("logo");
+
+      logo.onclick = function () {
+        window.location.href = "../";
+      };
+    </script>
+  </body>
 </html>

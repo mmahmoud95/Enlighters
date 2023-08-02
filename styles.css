@@ -18,9 +18,11 @@ nav {
   z-index: 10;
 }
 
-nav h1 {
+nav p {
   font-family: "Indie Flower", cursive;
   color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
 }
 
 nav ul {
@@ -98,6 +100,7 @@ main {
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
+  padding: 0 2rem;
 }
 
 .control select {

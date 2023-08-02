@@ -1,50 +1,48 @@
-#course{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 2rem;
+#course {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 2rem;
 }
-#course h1{
-    font-size: 1.2rem;
+#course h1 {
+  font-size: 1.2rem;
 }
-#course img{
-    width: 600px;
-    align-self: center;
+#course img {
+  width: 600px;
+  align-self: center;
 }
 #course p {
-    font-size: small;
+  font-size: small;
 }
 
-#course .des{
-    display: flex; 
-    gap: 1rem;
+#course .des {
+  display: flex;
+  gap: 1rem;
 }
 
 #course .name {
-    display: flex ;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 #course button {
-    padding: .5rem 1rem;
-    border: none;
-    cursor: pointer;
-
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
 }
 
 #course .enroll {
-    background-color: #6E3877;
-    color: #eee;
-
+  background-color: #6e3877;
+  color: #eee;
 }
- #course .content{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
- }
+#course .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 #course .enrolled {
-    background-color: #a877b0;
-    color: #eee;
-    cursor: not-allowed;
+  background-color: #a877b0;
+  color: #eee;
+  cursor: not-allowed;
 }

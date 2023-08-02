@@ -25,3 +25,10 @@ courses.courses.map((course) => {
 
     coursesContainer.appendChild(card);
 });
+
+
+var logo = document.getElementById('logo')
+
+logo.onclick = function () {
+    window.location.href = './'
+}

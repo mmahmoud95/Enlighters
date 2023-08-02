@@ -15,9 +15,11 @@ nav {
     padding: 10px 15px;
 }
 
-nav h1 {
+nav p {
     font-family: "Indie Flower", cursive;
     color: white;
+    cursor: pointer;
+    font-size: 1.3rem;
 }
 
 nav ul {
