@@ -13,10 +13,6 @@ courseContainer.innerHTML = `
 </diV>
 <p> Created By: ${currentCourse.instructor}</p>
 <img class="img" src="${currentCourse.image}" alt="${currentCourse.name}">
-<h2>Requirements</h2>
-<ul>
-${currentCourse.Requirements.map((req)=> `<li><p>${req}</p></li>`)}
-</ul>
 <h2>Description</h2>
 <p>${currentCourse.description}</p>
 `

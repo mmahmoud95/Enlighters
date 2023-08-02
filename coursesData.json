@@ -8,8 +8,67 @@
             "categories":"Web Development",
             "rating":"4.5",
             "userEnrolled":false,
-            "Requirements":["No programming experience needed - I'll teach you everything you need to know","A Mac or PC computer with access to the internet","No paid software required - I'll teach you how to use PyCharm, Jupyter Notebooks and Google Colab","I'll walk you through, step-by-step how to get all the software installed and set up"],
             "description":"Welcome to the 100 Days of Code - The Complete Python Pro Bootcamp, the only course you need to learn to code with Python. With over 500,000 5 STAR reviews and a 4.8 average, my courses are some of the HIGHEST RATED courses in the history of Udemy! 100 days, 1 hour per day, learn to build 1 project per day, this is how you master Python. At 60+ hours, this Python course is without a doubt the most comprehensive Python course available anywhere online. Even if you have zero programming experience, this course will take you from beginner to professional."
+        },
+        {
+            "id":2,
+            "name":"React Native - The Practical Guide [2023]",
+            "instructor":"Maximilian Schwarzmüller",
+            "image":"https://img-c.udemycdn.com/course/480x270/1436092_2024_4.jpg",
+            "categories":"Mobile Development",
+            "rating":"4.5",
+            "userEnrolled":true,
+            "description":"Mobile apps are one of the best ways to engage with users - no wonder everyone wants to build one! Wouldn't it be great if you could use your web development knowledge, combined with your React knowledge, to build mobile apps with that? That's exactly what React Native allows you to do! No need to learn Java, Android, Swift, ObjectiveC or anything of that - React and JavaScript is all you need to create awesome native mobile apps that work on both Android and iOS. That's probably the reason why Instagram, AirBnB, Skype and many other global companies are using it to build their mobile apps! With this course, you can join this league. I'll teach you all you need to create your own React Native apps, publish them to the Google Play Store and Apple App Store and dive really deep into the React Native ecosystem. You'll learn all about the theory behind React Native, its core concepts, how to build responsive designs that work on different device sizes, how to navigate around, use maps and the camera and so much more! And which better way to learn than by building a real app? We'll build the 'Favorite Places' app in this course, an app where users can share amazing pictures and the location where they took them. This app will allow you to see things like using maps, the camera, user authentication, connecting to a server and much more in action.By the end of the course, we'll of course also go through all steps required to get it into an app store."
+        },
+        {
+            "id":3,
+            "name":"Sales Training: A Month to Improve Your Sales Skills",
+            "instructor":"Rob Spence",
+            "image":"https://img-c.udemycdn.com/course/480x270/5419384_fb9e_3.jpg",
+            "categories":"Sales",
+            "rating":"5",
+            "userEnrolled":false,
+            "description":"This course has been designed for business owners, entrepreneurs, and sales professionals; if you need to improve your sales, this sales training course is for you! It also doesn't matter what you sell; whether you sell products or services, or B2B or B2C, this course has been designed to give you all the skills and knowledge to improve your sales skills, and to better your sales ability. Your instructor, Rob Spence, is an internationally renowned sales trainer, and sales coach, and has authored three books on sales. He is the Managing Director of a multi-award-winning sales and marketing agency that provides sales services to businesses across the globe. Rob's unique, dynamic, and engaging teaching style is guaranteed to not only help you to succeed in the world of sales but is also delivered in a memorable and motivating fashion."
+        },
+        {
+            "id":4,
+            "name":"Body Language Intelligence for Business Communication",
+            "instructor":"Dr. Dorothy Marcic",
+            "image":"https://img-c.udemycdn.com/course/480x270/5323082_8eb3_2.jpg",
+            "categories":"Communication",
+            "rating":"4.5",
+            "userEnrolled":false,
+            "description":"Being successful in the business world requires excellent communication skills. One of the most common reason executives are derailed is because they don’t have people/communication skills. Because 93% of interpersonal communication is NON-verbal, this course will help you learn to use non-verbals to create the best first impression, which includes showing confidence, dressing appropriately, giving a strong handshake, good eye contact, asking questions and thoughtfully listening to what they say. You'll also learn to shine in job interviews, to become more likable, to give engaging presentations, by paying attention to your voice, posture, gestures, and facial expressions. And you’ll become better in reading body language, so you can be more empathetic to co-workers, employees, and your boss. What does it mean when someone crosses their arms, when they purse their lips, when they have arms akimbo? How does body language establish territoriality in the office? In what ways can you become less defensive, which pushes people away, and more open, which welcomes others and creates collegiality. The course has 11 lectures, quizzes and exercises to help you learn the material. It is recommended you take the course with the study group at work and share your insights, practice new skills, and give each other feedback."
+        },
+        {
+            "id":5,
+            "name":"Etsy Goldmine: Generate Passive Income with Digital Products",
+            "instructor":"Claudiu Ivan",
+            "image":"https://img-c.udemycdn.com/course/480x270/5333994_da43_2.jpg",
+            "categories":"E-Commerce",
+            "rating":"4.5",
+            "userEnrolled":false,
+            "description":"Over time I have been looking for different methods to generate a monthly passive income without requiring experience, without needing a company (LLC, etc), and without requiring a website to be created. Well, after a long search, I found the solution and I want to share it with you through this course. This method does not require initial money and is 100% free. This is not a mistake. If you implement the strategies I have presented in this course, you can build a passive income stream that will not cost you a penny to start, but it will pay you satisfactory amounts in the coming months and years! If you dreamed of getting rid of the 9-5 job or just want to learn how to start a business, you can operate on your computer from anywhere in the world, this course can change your perspective.            "
+        },
+        {
+            "id":6,
+            "name":"How To Become a Bestselling Author on Amazon Kindle",
+            "instructor":"Tom Corson-Knowles",
+            "image":"https://img-c.udemycdn.com/course/480x270/46912_ef9e_4.jpg",
+            "categories":"Content Writing",
+            "rating":"4.5",
+            "userEnrolled":false,
+            "description":"Over time I have been looking for different methods to generate a monthly passive income without requiring experience, without needing a company (LLC, etc), and without requiring a website to be created. Well, after a long search, I found the solution and I want to share it with you through this course. This method does not require initial money and is 100% free. This is not a mistake. If you implement the strategies I have presented in this course, you can build a passive income stream that will not cost you a penny to start, but it will pay you satisfactory amounts in the coming months and years! If you dreamed of getting rid of the 9-5 job or just want to learn how to start a business, you can operate on your computer from anywhere in the world, this course can change your perspective.            "
+        },
+        {
+            "id":7,
+            "name":"Adobe Firefly: A Guide to AI Art, Generative AI, Photoshop",
+            "instructor":"Phil Ebiners",
+            "image":"https://img-c.udemycdn.com/course/480x270/5373312_a4cd.jpg",
+            "categories":"Graphic Design",
+            "rating":"4.5",
+            "userEnrolled":true,
+            "description":"The best thing about this course is that it will always be updated. With this technology being so new & constantly changing, there are many new features & releases. Whenever there is a new Adobe Firefly update, you'll get new tutorials in this course. "
         }
         
     ]
