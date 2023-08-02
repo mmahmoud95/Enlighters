@@ -39,7 +39,6 @@
 }
 .our-goals {
     padding: 36px 64px;
-    flex-direction: row;
 }
 .our-goals h2 {
     margin-bottom: 20px;
@@ -49,30 +48,29 @@
     border-bottom: #6e3877 5px solid;
 }
 
-.our-goals-card {
-    justify-content: space-between;
-}
 .row-one,
 .row-two {
     display: flex;
     padding-top: 24px;
-    margin-left: 20px;
-    padding: 24px 20px;
+    padding: 24px 32px;
 }
 ion-icon {
     padding: 10px 20px;
-    font-size: 48px;
+    font-size: 64px;
     color: #6e3877da;
     text-align: center;
+    margin-left: 80px;
 }
+
 .our-goals-card div {
     margin-bottom: 24px;
 }
 .our-goals-card h3 {
     color: #2b2a2acc;
-    font-size: 24px;
+    font-size: 32px;
     margin-bottom: 8px;
 }
 .our-goals-card p {
     color: #777;
+    font-size: 20px;
 }
