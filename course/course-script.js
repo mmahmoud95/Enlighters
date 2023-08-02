@@ -1,4 +1,4 @@
-import courses from './coursesData.json' assert { type: 'json' };
+import courses from '../coursesData.json' assert { type: 'json' };
 
 var courseID = window.location.href.split('?')[1].split('=')[1]
 

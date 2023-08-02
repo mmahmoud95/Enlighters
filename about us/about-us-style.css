@@ -47,7 +47,7 @@ nav img {
 }
 
 .header {
-    background-image: url(./Assets/about-us/header.jpg);
+    background-image: url(../Assets/about-us/header.jpg);
     height: 400px;
     display: flex;
     flex-direction: row;

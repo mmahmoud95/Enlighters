@@ -6,7 +6,7 @@ courses.courses.map((course) => {
     let card = document.createElement("div");
     card.classList.add("card");
     card.onclick = function () {
-        window.location.href = `course.html?id=${course.id}`;
+        window.location.href = `./course/course.html?id=${course.id}`;
     };
     card.id = course.id;
     card.innerHTML = `
