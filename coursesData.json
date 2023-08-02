@@ -7,8 +7,9 @@
             "image":"https://courselifetime.com/cdn/shop/products/100-days-of-code-2.jpg?v=1678433462&width=1445",
             "categories":"Web Development",
             "rating":"4.5",
-            "longDescription":"pla pla pla pla pla",
-            "userEnrolled":false
+            "userEnrolled":false,
+            "Requirements":["No programming experience needed - I'll teach you everything you need to know","A Mac or PC computer with access to the internet","No paid software required - I'll teach you how to use PyCharm, Jupyter Notebooks and Google Colab","I'll walk you through, step-by-step how to get all the software installed and set up"],
+            "description":"Welcome to the 100 Days of Code - The Complete Python Pro Bootcamp, the only course you need to learn to code with Python. With over 500,000 5 STAR reviews and a 4.8 average, my courses are some of the HIGHEST RATED courses in the history of Udemy! 100 days, 1 hour per day, learn to build 1 project per day, this is how you master Python. At 60+ hours, this Python course is without a doubt the most comprehensive Python course available anywhere online. Even if you have zero programming experience, this course will take you from beginner to professional."
         }
         
     ]
