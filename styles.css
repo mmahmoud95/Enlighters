@@ -125,11 +125,11 @@ main {
 
 }
 .control .search input {
-  border: 1px solid gray;
-  background-color: #eee;
+  border: none;
+  background-color: white;
   padding: 0.3rem 0.5rem 0.3rem 2rem;
   border-radius: 10px;
-  outline: 1px solid gray;
+  outline: none;
   width: 200px;
   transition: all 0.4s ease-in-out;
 }
