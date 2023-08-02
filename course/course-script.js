@@ -12,7 +12,11 @@ courseContainer.innerHTML = `
 <button class="${currentCourse.userEnrolled ? "enrolled" : " enroll"}">${currentCourse.userEnrolled ? "Enrolled" : " Enroll"}</button>
 </diV>
 <p> Created By: ${currentCourse.instructor}</p>
+<div class='des'>
 <img class="img" src="${currentCourse.image}" alt="${currentCourse.name}">
+<div class="content">
 <h2>Description</h2>
 <p>${currentCourse.description}</p>
+</div>
+</div>
 `

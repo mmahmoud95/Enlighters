@@ -15,8 +15,9 @@
     font-size: small;
 }
 
-#course ul {
-    margin-left: 2rem;
+#course .des{
+    display: flex; 
+    gap: 1rem;
 }
 
 #course .name {
@@ -37,7 +38,11 @@
     color: #eee;
 
 }
-
+ #course .content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+ }
 #course .enrolled {
     background-color: #a877b0;
     color: #eee;
