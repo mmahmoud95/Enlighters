@@ -151,7 +151,8 @@ body {
   padding: 0;
 }
 nav {
-  background-color: #6e3877;
+  background-color: rgb(110, 56, 119,.6);
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
