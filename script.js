@@ -33,13 +33,3 @@ logo.onclick = function () {
     window.location.href = './'
 }
 
-
-var dropDown=document.getElementById('selectOP');
-var flag=true;
-function disp(){
-if(flag){
-dropDown.style.display='block';
-flag=false;
-}
-flag=true;
-}
