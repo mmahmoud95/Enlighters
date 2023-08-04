@@ -19,7 +19,7 @@
   display: flex;
     justify-content: center;
     align-items: center;
-  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0,.9);
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.6);
 }
 .title0{
 display: block;
@@ -45,8 +45,9 @@ width: 100%;
 
 header h1{
     color:antiquewhite;
-    font-family: 'Lobster', cursive;
+    font-family: "Indie Flower", cursive;
     font-size: 50px;
+    margin-top: 2rem;
     font-weight: 400;
 }
 header h2{
