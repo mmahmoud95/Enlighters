@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="styles.css" rel="stylesheet" />
+    <link href="../styles.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="icon" type="image/x-icon" href="/Assets/graduation-hat.png" />
@@ -18,10 +18,10 @@
     <header>
       <nav>
         <div id="user">
-          <a href="./profile page/index.html">
+          <a href="./index.html">
             <i class="fa-solid fa-circle-user"></i> Profile 
           </a>
-          <a href="./settings page/index.html">
+          <a href="../settings page/index.html">
             <i class="fa-solid fa-gear"></i>  Settings 
           </a>
           <a href="#">
@@ -31,7 +31,7 @@
         <p id="logo">Enlighters.com</p>
         <ul>
           <li>
-            <a href="./">Home</a>
+            <a href="../index.html">Home</a>
           </li>
           <li>
             <a href="#">My Courses</a>
@@ -40,11 +40,11 @@
             <a href="#">Exams</a>
           </li>
           <li>
-            <a href="./about us/about-us.html">about us</a>
+            <a href="../about us/about-us.html">about us</a>
           </li>
           <li>
             <div id="user_icon"  href="#">
-              <img src="Assets/man.png"  />
+              <img src="../Assets/man.png"  />
               
             </div>
             
@@ -55,39 +55,17 @@
         </ul>
      
       </nav>
-      <div class="cv ">
-        <div>
-          <div class="title0">
-            <h1>EnLighters<span>.</span>Com</h1>
-          </div>
-          <h2>&nbsp  </h2>
-        </div>
-        </div>
-       
-    </header>
-   
-    <main>
-      <div class="control">
-        <div class="filter">
-          <p>Filter Courses</p>
-          <select>
-            <option>All Courses</option>
-            <option>Graphic Design</option>
-            <option>Web Development</option>
-            <option>Data Analysis</option>
-            <option>Digital Marketing</option>
-          </select>
-        </div>
-        <div class="search">
-          <input type="search" placeholder="Search for .." />
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-      </div>
-      <div class="container" id="courses"></div>
-    </main>
+      
 
-    <script src="script.js" type="module"></script>
+    <script src="../script.js" ></script>
+    <script>
+      var dropDown = document.getElementById('user')
+    var user_icon = document.getElementById('user_icon')
+    user_icon.onclick = function disp(){
+      dropDown.style.display = ((dropDown.style.display!='flex') ? 'flex' : 'none')
 
+    }
+    </script>
     <script
       src="https://kit.fontawesome.com/f6798b3fdf.js"
       crossorigin="anonymous"

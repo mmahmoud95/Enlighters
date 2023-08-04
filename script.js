@@ -33,3 +33,10 @@ logo.onclick = function () {
     window.location.href = './'
 }
 
+var dropDown = document.getElementById('user')
+var user_icon = document.getElementById('user_icon')
+user_icon.onclick = function disp(){
+  
+    dropDown.style.display = ((dropDown.style.display!='flex') ? 'flex' : 'none')
+
+}
