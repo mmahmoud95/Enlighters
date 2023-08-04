@@ -9,73 +9,86 @@ body {
     padding: 0;
 }
 
-h2{
+h2 {
     font-family: 'Indie Flower', cursive;
     text-align: center;
     font-size: 40px;
     font-weight: normal;
     color: rgb(76, 180, 207);
-    margin-top:30px;
+    margin-top: 30px;
     padding: 10px;
 }
-h2 .span1{
+
+h2 .span1 {
     font-family: 'Indie Flower', cursive;
     text-align: center;
     font-size: 40px;
     font-weight: normal;
-}
-span{
     color: rgb(251, 116, 231);
 }
-img{
-    margin:50px;
+
+img {
+    margin: 50px;
     padding-left: 150px;
 }
-.div1{
-    float:left;
-    width:30%;
+
+.div1 {
+    float: left;
+    width: 30%;
     height: 500px;
     /* background-color:blanchedalmond; */
-    margin-top:20px;
+    margin-top: 20px;
     text-align: center;
 
 }
 
-.div2{
-    float:left;
-    width:70%;
+.div2 {
+    float: left;
+    width: 70%;
     /* background-color: rgb(163, 158, 152); */
-    margin-top:100px;
+    margin-top: 100px;
     text-align: center;
 }
 
- .div2 button , .div2 p{
-    margin-left:10px;
-}
-.div2 input {
-    height: 40px;
-    width: 400px;
-    padding:15px;
-    border-radius:5px;
-    border:none;
-    margin-bottom:1px;
-}
-.div2 button{
-    width:130px;
-    height:35px;
-    border-radius: 5px;
-    border:none;
-    background-color:rgb(76, 180, 207);
-    color: white;
-    font-weight: bold;
-    font-size:medium;
-    margin-bottom:10px;
-}
-.div2 p{
-    color:rgb(76, 180, 207);
+.div2 span {
+    color: red;
+    display: none;
 }
 
-.div2 p a{
+.div2 input {
+    height: 50px;
+    width: 400px;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 1px;
+}
+
+.div2 button,
+.div2 p {
+    margin-left: 10px;
+}
+
+.div2 button {
+    width: 130px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(76, 180, 207);
+    margin-bottom: 10px;
+}
+
+.div2 button a {
+    text-decoration: none;
+    color: white;
+    font-weight: normal;
+    font-size: medium;
+}
+
+.div2 p {
+    color: rgb(76, 180, 207);
+}
+
+.div2 p a {
     color: rgb(251, 116, 231);
 }
-
