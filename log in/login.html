@@ -1,89 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="../styles.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Indie+Flower&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Indie+Flower&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
     <title>Document</title>
-   <style>
+    <style>
+        #i {
+            margin: 40px 50px;
+            padding: 50px;
+            text-align: right;
+            float: right;
+        }
 
-    #i
-    {
-        margin:40px 50px ;
-        padding: 50px;
-        text-align: right;
-        float:right;  
-    }
-    #form1
-    {
-        margin:100px;
-        padding: 100px 50px;
-        text-align: left;
-        float:right;
-        color:rgb(60, 155, 139);
-        
-    }
-    legend{
-        font-family: 'Indie Flower', cursive;  
-        font-size:25px;
-    }
-    input{
-        width:200px;
-        height: 30px;
-        font-size: 15px;
-        border-radius: 4px;
-        border: none;
-    }
-    input::placeholder{
-        color:rgb(60, 155, 139);
-      padding-left: 5px;
+        #form1 {
+            margin: 100px;
+            padding: 100px 50px;
+            text-align: left;
+            float: right;
+            color: rgb(60, 155, 139);
 
-    }
-    #s1{
-        color:red;
-    }
-    a{
-    color:red;    
-    }
-    .submit{
-        text-align: center;
-        margin:40px;
-        background-color: rgb(60, 155, 139);
-        color:white;
-     border: none;
-      padding: 5px;
-      border-radius: 4px;
-      height: 30px;
-        width:100px; 
-    }
-   </style>
+        }
+
+        legend {
+            font-family: 'Indie Flower', cursive;
+            font-size: 25px;
+        }
+
+        input {
+            width: 200px;
+            height: 30px;
+            font-size: 15px;
+            border-radius: 4px;
+            border: none;
+        }
+
+        input::placeholder {
+            color: rgb(60, 155, 139);
+            padding-left: 5px;
+
+        }
+
+        #s1 {
+            color: red;
+        }
+
+        a {
+            color: red;
+        }
+
+        #submit {
+            text-align: center;
+            margin: 40px;
+            background-color: rgb(60, 155, 139);
+            color: white;
+            border: none;
+            padding: 5px;
+            border-radius: 4px;
+            height: 30px;
+            width: 100px;
+        }
+    </style>
 </head>
+
 <body>
-<div id="container">
-    <div id="i">
-    <img src="../Assets/welcome2.png" height="500" width="500" >
-</div>
-         <form id="form1">
-        <legend>welcome to <span id="s1">Enlighters.com</span></legend>
-        <br>
-        <input type="text" name="username" id="username" placeholder="username or E-mail"><br>
-        <br>
-        <input type="password" name="pass" id="pass" placeholder="passwors">
-        <br>
-        <!-- <input type="submit" class="submit" value="Log in" > -->
-        <button class="submit"> Log in</button>
-        <br>
-    
-        <span id="s"> Don't have an account?
-    <a href="../singup/index.html">
-        Sign Up
-    </a>
-</span>
- </form>
+    <div id="container">
+        <div id="i">
+            <img src="../Assets/welcome2.png" height="500" width="500">
+        </div>
+        <form id="form1">
+            <legend>welcome to <span id="s1">Enlighters.com</span></legend>
+            <br>
+            <input type="text" name="username" id="username" placeholder="username or E-mail" reuired><br>
+            <br>
+            <input type="password" name="pass" id="pass" placeholder="passwors" reuired>
+            <br>
+            <!-- <input type="submit" class="submit" value="Log in" > -->
+            <button id="submit" onclick="val()"> Log in</button>
+            <br>
+
+            <span id="s"> Don't have an account?
+                <a href="../singup/index.html">
+                    Sign Up
+
+                </a>
+            </span>
+        </form>
     </div>
-</div>
+    </div>
+    <script>
+        var submit = document.getElementById("submit");
+        function val() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("pass").value;
+            var patternUser = /^[A-Za-z]{3,}$/;
+            var patternEmail = /^[A-Za-z]{3,}@[a-z]{5,}(.com)$/;
+
+            // var test = patternUser.test(userName);
+            if (patternUser.test(userName)) {
+                username.style.border = "3px solid green";
+
+            }
+            else {
+                username.style.border = "3px solid red";
+
+            }
+
+            var patternPass = /[A-Za-z0-9]{3,}$/;
+            var test = patternPass.test(password);
+            if (test !== true) {
+                document.getElementById("pass").style.border = "3px solid red";
+            }
+            else {
+                document.getElementById("pass").style.border = "3px solid green";
+
+            }
+        }
+        var data_user = { username: "ahmed", passworg: 12 };
+        var dataJSON = JSON.stringify(data_user);
+        localStorage.setItem('user_data', dataJSON);
+        console.log(data_user);
+        // var users_data = localStorage.getItem('users_data').data_user
+        // console.log(users_data);
+
+
+
+    </script>
 </body>
+
+
 </html>
