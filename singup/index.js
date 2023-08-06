@@ -1,7 +1,7 @@
 var submit = document.getElementById("submit");
 
 submit.addEventListener('mouseover', function () {
-    var Name = document.getElementById("name");
+    var Name = document.getElementById("name").value;
     var userNmae = document.getElementById("user").value
     var Email = document.getElementById("email").value;
     var Password = document.getElementById("password").value;
@@ -20,7 +20,7 @@ submit.addEventListener('mouseover', function () {
     rePassword.value = rePasswordValue;
 
     console.log(Name);
-    var patternName = /^[A-Za-z]{3,}()[A-Za-z]{4,}$/
+    var patternName = /^[A-Za-z]{3,}\s[A-Za-z]{3,}$/;
     var test = patternName.test(Name);
     if (test !== true) {
         document.getElementById("name").style.border = "1px solid red";
@@ -48,7 +48,7 @@ submit.addEventListener('mouseover', function () {
     else {
         document.getElementById("email").style.border = "1px solid green";
     }
-    var patternPass = /[A-Za-z0-9].*[#$@%*&]{8,}$/;
+    var patternPass = /[A-Za-z0-9]{8,}$/;
     var test = patternPass.test(passwordValue);
     if (test !== true) {
         document.getElementById("password").style.border = "1px solid red";
