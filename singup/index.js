@@ -75,8 +75,8 @@ submit.addEventListener('click', function () {
     console.log(objectLength);
     if (objectLength === 5) {
         all_users.push(data_user);
-        // console.log(data_user);
-        //console.log(all_users);
+        console.log(all_users);
+        console.log(data_user);
         var dataJSON = JSON.stringify(all_users);
         localStorage.setItem('user_data', dataJSON);
     }

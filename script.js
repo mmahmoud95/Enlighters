@@ -81,8 +81,6 @@ categoriesOptions.onchange = (e) => {
 
 //  filter ended
 
-
-
 var logo = document.getElementById("logo");
 
 logo.onclick = function () {
