@@ -21,7 +21,7 @@ submit.addEventListener('click', function () {
     Password.value = passwordValue;
     rePassword.value = rePasswordValue;
 
-    var patternName = /^[A-Za-z]{3,}\s[A-Za-z]{3,}$/;
+    var patternName = /^[A-Za-z]{3,}\s[A-Za-z]{3,}$/i;
     var test = patternName.test(Name);
     if (test !== true) {
         document.getElementById("name").style.border = "1px solid red";
@@ -70,9 +70,14 @@ submit.addEventListener('click', function () {
     } else {
         document.getElementById("rePassword").style.border = "1px solid green";
     }
-    all_users.push(data_user);
-    // console.log(data_user);
-    // console.log(all_users);
-    var dataJSON = JSON.stringify(all_users);
-    localStorage.setItem('user_data', dataJSON);
+
+    var objectLength = Object.keys(data_user).length;
+    console.log(objectLength);
+    if (objectLength === 5) {
+        all_users.push(data_user);
+        // console.log(data_user);
+        //console.log(all_users);
+        var dataJSON = JSON.stringify(all_users);
+        localStorage.setItem('user_data', dataJSON);
+    }
 });
