@@ -204,15 +204,37 @@ main {
   width: 250px;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
+  animation: popup .5s ease-in-out  forwards;
+  position: relative;
 }
-
+@keyframes popup {
+  0%{
+    transform: scale(0);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
 .card:hover {
   box-shadow: 1px 1px 2px 0px gray;
   transform: scale(1.1);
 }
-
+.category {
+  position: absolute;
+  background-color: rgba(99, 32, 99, 0.674);
+  color: white;
+  padding: 5px;
+  font-size: 10px;
+  opacity: .8;
+  top: 0;
+  right: 0;
+}
+.category:hover{
+  opacity: 1;
+}
 .card .img img {
   width: 250px;
+  height: 130px;
   object-fit: cover;
 }
 .text {
@@ -280,7 +302,7 @@ main {
     position: absolute;
     font-size: 10px;
     left: 10px;
-    top:9px;
+    top:8px;
     opacity: 40%;
     border-right: 1px solid gray;
     padding-right: .3rem;
@@ -298,6 +320,8 @@ main {
   top: 3rem;
   font-size: 1rem;
   box-shadow: 0 0 5px 0px rgb(47, 46, 46);
+  margin-top: .5rem;
+  border-radius: 5px;
 
 }
 #user::after{
@@ -307,7 +331,7 @@ main {
 	border-bottom: 5px solid #ffffff;
   position: absolute;
   top: -4px;
-  right: 33%;
+  right: 26%;
 }
 #user a {
   padding: .5rem;
