@@ -1,0 +1,273 @@
+
+
+body {
+  background-color: #eee;
+  font-family: "Roboto", sans-serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+nav {
+  background-color: rgb(110, 56, 119);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+nav p {
+  font-family: "Indie Flower", cursive;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul li {
+  border-right: 1px solid #eeeeee70;
+  padding: 5px 15px;
+}
+nav ul li a:hover {
+  color: rgba(238, 255, 135, 0.69);
+}
+
+nav ul li:last-child {
+  border-right: none;
+}
+nav ul a {
+  text-decoration: none;
+  color: #eee;
+}
+nav img {
+  width: 25px;
+}
+
+
+#user_icon{
+  cursor: pointer;
+}
+#user {
+  display: none; 
+  flex-direction: column;
+  position: absolute;
+  background-color: white;
+  right: .8rem;
+  top: 3rem;
+  font-size: .8rem;
+  box-shadow: 0 0 5px 0px rgb(47, 46, 46);
+  /* height: 75px;
+  transition: all .5s ease-in-out; */
+}
+#user::after{
+  content: '';
+  border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid #ffffff;
+  position: absolute;
+  top: -4px;
+  right: 33%;
+}
+#user a {
+  padding: .3rem .5rem;
+  text-decoration: none;
+  color:rgb(110, 56, 119) ;
+}
+
+#user a:hover{
+  background-color: rgb(110, 56, 119);
+  color: white;
+}
+
+
+/* Profile Page Start */
+#ProContainer{
+  position: absolute;
+  top: 15%;
+  width: 90%;
+  left: 5%;
+  
+  
+  }
+  #ProContainer img{
+  
+    width: 150px;
+  }
+  
+  .man{
+    text-align: center;
+    width: 30%;
+    height: 82vh;
+    background-color: rgb(248, 234, 210);
+    border-radius: 80px;
+    border: none;
+   box-shadow: 6px 6px 2px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+  .man p{
+    margin-top: 10px;
+    font-size:25px;
+    font-weight: 600;
+  }
+  
+  #Int_Label{
+    margin-top: 30px;
+  
+    width: 100%;
+    top: 30px;
+    color:rgb(0, 0, 0,.5);
+    
+  }
+  .title{
+   margin-bottom: 20px; 
+  }
+  
+  .interests p{
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    width: 160px;
+    height: 25px;
+    padding-top: 3px ;
+    border-radius: 10px;
+    background-color:rgb(110, 56, 119);
+    display: inline-block;
+  }
+  
+  .interests p:nth-child(3){
+    width: 120px;
+  }
+  
+  .interests p:nth-child(4){
+    width: 130px;
+  }
+  .interests p:nth-child(5){
+    width: 70px;
+  }
+  .interests p:nth-child(6){
+    width: 70px;
+  }
+  .interests{
+    margin-top: 40px;
+    margin-bottom: 40px;
+  
+  }
+  
+  #trophy3:nth-child(1),#trophy3:nth-child(3){
+    font-size: 30px;
+    color: orange;
+  }
+  
+  #trophy4:nth-child(2){
+    transform: rotate(-45deg);
+    font-size: 30px;
+    color: orange;
+  }
+  
+  
+  #trophy4:nth-child(4){
+    transform: rotate(-45deg);
+    font-size: 30px;
+    color:rgb(110, 56, 119) ;
+  }
+  
+  #trophy3:nth-child(5){
+    font-size: 30px;
+    color:rgb(110, 56, 119) ;
+  }
+  
+  #trophy1:nth-child(1),#trophy1:nth-child(3),#trophy1:nth-child(5){
+    font-size: 30px;
+    color: rgb(89, 89, 243);
+  }
+  
+  
+  #trophy2:nth-child(2),#trophy2:nth-child(4){
+    transform: rotate(-45deg);
+    font-size: 30px;
+    color: rgb(89, 89, 243);
+  }
+  .first{
+    margin-bottom: 15px;
+  }
+  
+  
+  /* second part at profile page  */
+  
+  .details{
+    display: inline-block;
+  
+    width: 67%;
+    height: 82vh;
+    position: absolute;
+    left: 33%;
+    top: 0;
+    background-color: rgb(248, 234, 210);
+    border-radius: 80px;
+    border: none;
+    box-shadow: 6px 8px 1px 1px rgba(0, 0, 0, 0.2);
+  }
+  
+  .details #container{
+    position: relative;
+    left: 5%;
+    width: 90%;
+    margin-top: 3rem;
+  }
+  
+  #container input{
+    width: 100%;
+    border: 1px solid rgb(119, 119, 208) ;
+    border-radius: 6px;
+    height: 35px;
+  }
+  
+  .bton{
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  #btn1{
+    background-color: rgb(50, 50, 189);
+    color:white ;
+    width: 150px;
+    border:none ;
+    height: 30px;
+    text-align: center;
+    border-radius: 15px;
+    transition: all 1s;
+    margin-right: 50px;
+  }
+  
+  #btn1:hover{
+  opacity: .7;
+  }
+  
+  #btn2{
+    background-color:rgb(179, 136, 57);
+    color:white ;
+    width: 150px;
+    border:none ;
+    height: 30px;
+    text-align: center;
+    margin-left: 50px;
+    border-radius: 15px;
+  transition: all 1s;
+  }
+  
+  #btn2:hover{
+    opacity: .7;
+  }
+  
+  /* Profile Page End */
+  
