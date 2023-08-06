@@ -1,95 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="styles.css" rel="stylesheet" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="icon" type="image/x-icon" href="/Assets/graduation-hat.png" />
-    <title>Enlighters</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Indie+Flower&family=Roboto:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
-    <title>Document</title>
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div id="user">
-          <a href="./profile page/index.html">
-            <i class="fa-solid fa-circle-user"></i> Profile 
-          </a>
-          <a href="./settings page/index.html">
-            <i class="fa-solid fa-gear"></i>  Settings 
-          </a>
-          <a href="#">
-            <i class="fa-solid fa-right-from-bracket"></i>  Log out 
-          </a>
-        </div>
-        <p id="logo">Enlighters.com</p>
-        <ul>
-          <li>
-
-
-
-              
-            <a href="./">Home</a>
-          </li>
-          <li>
-            <a href="#">My Courses</a>
-          </li>
-          <li>
-            <a href="./log in/login.html">Exams</a>
-          </li>
-          <li>
-            <a href="./about us/about-us.html">about us</a>
-          </li>
-          <li>
-            <div id="user_icon"  href="#">
-              <img src="Assets/man.png"  />
-              
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="styles.css" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="icon"
+            type="image/x-icon"
+            href="/Assets/graduation-hat.png"
+        />
+        <title>Enlighters</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Indie+Flower&family=Roboto:wght@300;400&display=swap"
+            rel="stylesheet"
+        />
+        <title>Document</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div id="user">
+                    <a href="./profile page/index.html">
+                        <i class="fa-solid fa-circle-user"></i> Profile
+                    </a>
+                    <a href="./settings page/index.html">
+                        <i class="fa-solid fa-gear"></i> Settings
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-right-from-bracket"></i> Log out
+                    </a>
+                </div>
+                <p id="logo">Enlighters.com</p>
+                <ul>
+                    <li>
+                        <a href="./">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">My Courses</a>
+                    </li>
+                    <li>
+                        <a href="./log in/login.html">Exams</a>
+                    </li>
+                    <li>
+                        <a href="./about us/about-us.html">about us</a>
+                    </li>
+                    <li>
+                        <div id="user_icon" href="#">
+                            <img src="Assets/man.png" />
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="cv">
+                <div>
+                    <div class="title0">
+                        <h1>EnLighters<span>.</span>Com</h1>
+                    </div>
+                    <h2>&nbsp</h2>
+                </div>
             </div>
-            
-          </li>
-                 
-        </ul>
-     
-      </nav>
-      <div class="cv ">
-        <div>
-          <div class="title0">
-            <h1>EnLighters<span>.</span>Com</h1>
-          </div>
-          <h2>&nbsp  </h2>
-        </div>
-        </div>
-       
-    </header>
-   
-    <main>
-      <div class="control">
-        <div class="filter">
-          <p>Filter Courses</p>
-          <select id="categories">
-            <option>All Courses</option>
-         
-          </select>
-        </div>
-        <div class="search">
-          <input type="search" placeholder="Search for .." />
-          <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
-      </div>
-      <div class="container" id="courses"></div>
-    </main>
+        </header>
 
-    <script src="script.js" type="module"></script>
-
-    <script
-      src="https://kit.fontawesome.com/f6798b3fdf.js"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+        <main>
+            <div class="control">
+                <div class="filter">
+                    <p>Filter Courses</p>
+                    <select id="categories">
+                        <option>All Courses</option>
+                    </select>
+                </div>
+                <div class="search">
+                    <input type="search" placeholder="Search for .." />
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="container" id="courses"></div>
+        </main>
+        <!------------------Footer----------------------->
+        <footer>
+            <div class="footer-container">
+                <div>
+                    <h2 id="logo">Enlighters.com</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing
+                        elit. Consectetur pariatur repellat quisquam corporis
+                        fugiat officia odio perspiciatis fugit ex,
+                    </p>
+                </div>
+                <div class="footer-courses">
+                    <h2>Courses</h2>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Mobile Development</a></li>
+                        <li><a href="#">Sales</a></li>
+                        <li><a href="#">Graphic Design</a></li>
+                        <li><a href="#">Arts</a></li>
+                    </ul>
+                </div>
+                <div class="follow-us">
+                    <h2>Follow Us</h2>
+                    <a href="#">
+                        <ion-icon
+                            name="logo-facebook"
+                            class="facebook"
+                        ></ion-icon></a
+                    ><a href="#"
+                        ><ion-icon
+                            name="logo-twitter"
+                            class="twitter"
+                        ></ion-icon
+                    ></a>
+                    <a href="#"
+                        ><ion-icon
+                            name="logo-youtube"
+                            class="youtube"
+                        ></ion-icon
+                    ></a>
+                    <a href="#"
+                        ><ion-icon
+                            name="logo-linkedin"
+                            class="linkedin"
+                        ></ion-icon
+                    ></a>
+                    <a href="#"
+                        ><ion-icon
+                            name="logo-instagram"
+                            class="instgrame"
+                        ></ion-icon
+                    ></a>
+                </div>
+            </div>
+            <div>
+                <p class="copyright">
+                    Copyright&copy;2023 Enlighters.com , All Right Reserved
+                </p>
+            </div>
+        </footer>
+        <script src="script.js" type="module"></script>
+        <script
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+        ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+        ></script>
+        <script
+            src="https://kit.fontawesome.com/f6798b3fdf.js"
+            crossorigin="anonymous"
+        ></script>
+    </body>
 </html>
