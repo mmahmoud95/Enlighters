@@ -1,5 +1,4 @@
 var submit = document.getElementById("submit");
-// sub
 var data_user = {};
 var all_users = [];
 submit.addEventListener('click', function () {
@@ -9,17 +8,17 @@ submit.addEventListener('click', function () {
     var Password = document.getElementById("password").value;
     var rePassword = document.getElementById("rePassword").value;
 
-    var nameValue = Name.value
-    var userValue = userName.value
-    var emailValue = Email.value
-    var passwordValue = Password.value
-    var rePasswordValue = rePassword.value
+    // var nameValue = Name.value
+    // var userValue = userName.value
+    // var emailValue = Email.value
+    // var passwordValue = Password.value
+    // var rePasswordValue = rePassword.value
 
-    Name.value = nameValue;
-    userName.value = userValue;
-    Email.value = emailValue;
-    Password.value = passwordValue;
-    rePassword.value = rePasswordValue;
+    // Name.value = nameValue;
+    // userName.value = userValue;
+    // Email.value = emailValue;
+    // Password.value = passwordValue;
+    // rePassword.value = rePasswordValue;
 
     var patternName = /^[A-Za-z]{3,}\s[A-Za-z]{3,}$/i;
     var test = patternName.test(Name);
@@ -63,9 +62,9 @@ submit.addEventListener('click', function () {
         data_user.password = Password;
     }
 
-    if (rePasswordValue === "") {
+    if (rePassword === "") {
         document.getElementById("rePassword").style.border = "1px solid red";
-    } else if (rePasswordValue !== passwordValue) {
+    } else if (rePassword !== Password) {
         document.getElementById("rePassword").style.border = "1px solid red";
     } else {
         document.getElementById("rePassword").style.border = "1px solid green";
