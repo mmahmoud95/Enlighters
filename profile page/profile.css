@@ -1,5 +1,95 @@
 
 
+body {
+  background-color: #eee;
+  font-family: "Roboto", sans-serif;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+nav {
+  background-color: rgb(110, 56, 119);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+nav p {
+  font-family: "Indie Flower", cursive;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul li {
+  border-right: 1px solid #eeeeee70;
+  padding: 5px 15px;
+}
+nav ul li a:hover {
+  color: rgba(238, 255, 135, 0.69);
+}
+
+nav ul li:last-child {
+  border-right: none;
+}
+nav ul a {
+  text-decoration: none;
+  color: #eee;
+}
+nav img {
+  width: 25px;
+}
+
+
+#user_icon{
+  cursor: pointer;
+}
+#user {
+  display: none; 
+  flex-direction: column;
+  position: absolute;
+  background-color: white;
+  right: .8rem;
+  top: 3rem;
+  font-size: .8rem;
+  box-shadow: 0 0 5px 0px rgb(47, 46, 46);
+  /* height: 75px;
+  transition: all .5s ease-in-out; */
+}
+#user::after{
+  content: '';
+  border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid #ffffff;
+  position: absolute;
+  top: -4px;
+  right: 33%;
+}
+#user a {
+  padding: .3rem .5rem;
+  text-decoration: none;
+  color:rgb(110, 56, 119) ;
+}
+
+#user a:hover{
+  background-color: rgb(110, 56, 119);
+  color: white;
+}
+
+
 /* Profile Page Start */
 #ProContainer{
   position: absolute;

@@ -1,0 +1,30 @@
+
+//Done
+- Design The main theme  >>> Hossam >> Done 
+- build navbar >>> Hossam >> Done
+- build Homepage (cards) >>> Hossam >> Done
+- fetching courses data from JSON file >>> Hossam >> Done
+- building about us Page >>> Mostafa >>> Done
+- building the header in the homePage and animating it >> Mahmoud >>> Done
+- building the Signup page >> Aya >>> Done
+- building the login page >> Sara >>> Done
+- building the Profile page >> Mahmoud >>> Done
+- validating the Signup page >> Aya >>> Done
+- validating the Login page >> sara >>> Done
+
+//in progress ................
+- validating the Profile page >> Mahmoud >>> in Progress ................
+- linking signup data to Local storage >>> aya >> in progress ................
+- verifying the login data from the Local storage >>> sara >>> in progress ................
+- building footer >> Mostafa >>> in progress ................
+
+//unassigned
+- activating Enroll logic and add the Enrolled course to the user courses >>
+- linking user data to my courses page >> 
+- activating search logic in Home Page >>
+- activating search logic in my courses Page >>
+- building settings Page >>
+
+
+//Bonus 
+- Building Exams Page >> 
