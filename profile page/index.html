@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./fontawesome-free-6.4.0-web/css/all.min.css" rel="stylesheet" />
 
+    <link href="../styles.css" rel="stylesheet" />
     <link href="profile.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +21,7 @@
 <body>
     <nav>
         <div id="user">
-            <a href="./profile page/index.html">
+            <a href="index.html">
                 <i class="fa-solid fa-circle-user"></i> Profile
             </a>
             <a href="./settings page/index.html">
@@ -33,16 +34,16 @@
         <p id="logo">Enlighters.com</p>
         <ul>
             <li>
-                <a href="./">Home</a>
+                <a href="../index.html">Home</a>
             </li>
             <li>
                 <a href="#">My Courses</a>
             </li>
             <li>
-                <a href="./log in/login.html">Exams</a>
+                <a href="../log in/login.html">Exams</a>
             </li>
             <li>
-                <a href="./about us/about-us.html">about us</a>
+                <a href="../about us/about-us.html">about us</a>
             </li>
             <li>
                 <div id="user_icon" href="#">
@@ -126,6 +127,14 @@
             </div>
         </div>
     </section>
+    <script>
+        var dropDown = document.getElementById('user')
+      var user_icon = document.getElementById('user_icon')
+      user_icon.onclick = function disp(){
+        dropDown.style.display = ((dropDown.style.display!='flex') ? 'flex' : 'none')
+      
+      }
+      </script>
     <script src="script.js" type="module"></script>
 
 </body>
