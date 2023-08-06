@@ -20,20 +20,18 @@ submit.addEventListener('click', function () {
     // Password.value = passwordValue;
     // rePassword.value = rePasswordValue;
 
-    var patternName = /^[A-Za-z]{3,}\s[A-Za-z]{3,}$/i;
+    var patternName = /^[A-Za-z]{3,}(\s[A-Za-z]{3,})+$/i;
     var test = patternName.test(Name);
     if (test !== true) {
         document.getElementById("name").style.border = "1px solid red";
-
     }
     else {
         document.getElementById("name").style.border = "1px solid green";
         data_user.id = parseInt(Math.random() * 1000);
         data_user.fullName = Name;
-        // console.log(data_user);
     }
 
-    var patternUser = /^[A-Z]{3,}[0-9]{4,}$/i
+    var patternUser = /[A-Za-z._@#$%&*0-9]*/i
     var test = patternUser.test(userName);
     if (test !== true) {
         document.getElementById("user").style.border = "1px solid red";
@@ -43,7 +41,7 @@ submit.addEventListener('click', function () {
         data_user.userName = userName;
     }
 
-    var patternEmail = /^[A-Za-z]{3,}@[a-z]{5,}(.com)$/
+    var patternEmail = /^[A-Za-z0-9_.]{3,}@[A-Za-z]+(\.com)$/;
     var test = patternEmail.test(Email);
     if (test !== true) {
         document.getElementById("email").style.border = "1px solid red";
@@ -52,7 +50,7 @@ submit.addEventListener('click', function () {
         document.getElementById("email").style.border = "1px solid green";
         data_user.email = Email;
     }
-    var patternPass = /[A-Za-z0-9]{8,}$/;
+    var patternPass = /[A-Za-z0-9._@#$%&*]{8,}$/;
     var test = patternPass.test(Password);
     if (test !== true) {
         document.getElementById("password").style.border = "1px solid red";
@@ -60,6 +58,7 @@ submit.addEventListener('click', function () {
     else {
         document.getElementById("password").style.border = "1px solid green";
         data_user.password = Password;
+        //alert(Password);
     }
 
     if (rePassword === "") {
