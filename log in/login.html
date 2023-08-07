@@ -95,33 +95,58 @@
         </form>
     </div>
     </div>
+
     <script>
         var username = document.getElementById("username");
 
-        var data = JSON.parse(localStorage.getItem("data"));
+        var submit = document.getElementById("submit");
 
-        var pass = document.getElementById("pass");
-        var pattern = /[A-Za-z._@#$%&*0-9]{3,}/i;
-        username.onblur = function(e){
-            if(!pattern.test(e.target.value)){
-                username.style.border = "1px solid red"
-            }
-            else{
-                username.style.border = "1px solid green"
-            }
-        }
+        submit.addEventListener('click', function () {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("pass").value;
+            var patternUser = /^[A-Za-z]{3,}$/;
+            var patternEmail = /^[A-Za-z]{3,}@[a-z]{5,}(.com)$/;
 
-function onSubmit(e){
-    e.preventDefault()
-    var isHere = data.users.find((user)=> user.userName === username.value && user.password === pass.value)
-    
-    if(isHere){
-        data.current_user = isHere.id 
-        localStorage.setItem("data", JSON.stringify(data))
-        console.log('authorized')
-        console.log(localStorage.getItem("data"))
-    }
-}
+            // var test = patternUser.test(userName);
+            if (patternUser.test(userName) == true) {
+                document.getElementById("username").style.border = "3px solid green";
+
+
+        // var submit = document.getElementById("submit");
+        // function val(e) {
+        //     e.preventDefault();
+        //     console.log('sd')
+            
+        //     // var test = patternUser.test(userName);
+        //     if (patternUser.test(userName)) {
+        //         username.style.border = "3px solid green";
+
+        //     }
+        //     else {
+        //         username.style.border = "3px solid red";
+
+        //     }
+
+            // var patternPass = /[A-Za-z0-9]{3,}$/;
+        //     var test = patternPass.test(password);
+        //     if (test !== true) {
+        //         document.getElementById("pass").style.border = "3px solid red";
+        //     }
+        //     else {
+        //         document.getElementById("pass").style.border = "3px solid green";
+
+        //     }
+        // }
+            }
+        });
+        // var data_user = { username: "ahmed", passworg: 12 };
+        // var dataJSON = JSON.stringify(data_user);
+        // localStorage.setItem('user_data', dataJSON);
+        // console.log(data_user);
+        // var users_data = localStorage.getItem('users_data').data_user
+        // console.log(users_data);
+
+
 
     </script>
 </body>
