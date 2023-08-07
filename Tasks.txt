@@ -11,19 +11,19 @@
 - building the Profile page >> Mahmoud >>> Done
 - validating the Signup page >> Aya >>> Done
 - validating the Login page >> sara >>> Done
+- linking signup data to Local storage >>> aya >> done
+- verifying the login data from the Local storage >>> sara >>> done
 
 //in progress ................
 - validating the Profile page >> Mahmoud >>> in Progress ................
-- linking signup data to Local storage >>> aya >> in progress ................
-- verifying the login data from the Local storage >>> sara >>> in progress ................
 - building footer >> Mostafa >>> in progress ................
+- activating Enroll logic and add the Enrolled course to the user courses >>  aya & sara >> inprogress
 
 //unassigned
-- activating Enroll logic and add the Enrolled course to the user courses >>
-- linking user data to my courses page >> 
-- activating search logic in Home Page >>
-- activating search logic in my courses Page >>
-- building settings Page >>
+- linking user data to my courses page >> mostafa
+- activating search logic in my courses Page >> mostafa
+- activating search logic in Home Page >> mahmoud
+- building settings Page >> mahmoud
 
 
 //Bonus 

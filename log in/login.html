@@ -75,7 +75,7 @@
         <div id="i">
             <img src="../Assets/welcome2.png" height="500" width="500">
         </div>
-        <form id="form1" onsubmit="val(e)">
+        <form id="form1" onsubmit="onSubmit(event)">
             <legend>welcome to <span id="s1">Enlighters.com</span></legend>
             <br>
             <input type="text" name="username" id="username" placeholder="username or E-mail" reuired>
@@ -84,68 +84,44 @@
             <input type="password" name="pass" id="pass" placeholder="passwords" reuired>
             <br>
             <!-- <input type="submit" class="submit" value="Log in" > -->
-            <button id="submit"> Log in</button>
+            <button type="submit" id="submit"> Log in</button>
             <br>
 
             <span id="s"> Don't have an account?
                 <a href="../singup/index.html">
                     Sign Up
-
                 </a>
             </span>
         </form>
     </div>
     </div>
     <script>
+        var username = document.getElementById("username");
 
-        var submit = document.getElementById("submit");
+        var data = JSON.parse(localStorage.getItem("data"));
 
-        submit.addEventListener('click', function () {
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("pass").value;
-            var patternUser = /^[A-Za-z]{3,}$/;
-            var patternEmail = /^[A-Za-z]{3,}@[a-z]{5,}(.com)$/;
-
-            // var test = patternUser.test(userName);
-            if (patternUser.test(userName) == true) {
-                document.getElementById("username").style.border = "3px solid green";
-
-
-        // var submit = document.getElementById("submit");
-        // function val(e) {
-        //     e.preventDefault();
-        //     console.log('sd')
-            
-        //     // var test = patternUser.test(userName);
-        //     if (patternUser.test(userName)) {
-        //         username.style.border = "3px solid green";
-
-        //     }
-        //     else {
-        //         username.style.border = "3px solid red";
-
-        //     }
-
-            // var patternPass = /[A-Za-z0-9]{3,}$/;
-        //     var test = patternPass.test(password);
-        //     if (test !== true) {
-        //         document.getElementById("pass").style.border = "3px solid red";
-        //     }
-        //     else {
-        //         document.getElementById("pass").style.border = "3px solid green";
-
-        //     }
-        // }
+        var pass = document.getElementById("pass");
+        var pattern = /[A-Za-z._@#$%&*0-9]{3,}/i;
+        username.onblur = function(e){
+            if(!pattern.test(e.target.value)){
+                username.style.border = "1px solid red"
             }
-        });
-        // var data_user = { username: "ahmed", passworg: 12 };
-        // var dataJSON = JSON.stringify(data_user);
-        // localStorage.setItem('user_data', dataJSON);
-        // console.log(data_user);
-        // var users_data = localStorage.getItem('users_data').data_user
-        // console.log(users_data);
+            else{
+                username.style.border = "1px solid green"
+            }
+        }
 
-
+function onSubmit(e){
+    e.preventDefault()
+    var isHere = data.users.find((user)=> user.userName === username.value && user.password === pass.value)
+    
+    if(isHere){
+        data.current_user = isHere.id 
+        localStorage.setItem("data", JSON.stringify(data))
+        console.log('authorized')
+        console.log(localStorage.getItem("data"))
+    }
+}
 
     </script>
 </body>
