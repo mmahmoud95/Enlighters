@@ -24,20 +24,25 @@ courseContainer.innerHTML = `
 </div>
 `;
 
-var myCourses = [];
 var enroll = document.getElementById("enroll");
 enroll.addEventListener("click", () => {
-    myCourses.push(currentCourse);
-    setLocalStorage();
-    // console.log(myCourses);
+    var data = JSON.parse(localStorage.getItem("data"))
+    var currentuserID =  data.current_user
+    var userIndex = data.users.findIndex((user)=>user.id === currentuserID)
+    var myCourses = data.users[userIndex].courses || []
+  
+    myCourses.push(currentCourse.id);
+    data.users[userIndex].courses = myCourses
+
+    localStorage.setItem("data", JSON.stringify(data)); //override
+    console.log(data.users[userIndex]);
+
 });
-function setLocalStorage() {
-    localStorage.setItem("mycourses", JSON.stringify(myCourses));
-}
-var storage = JSON.parse(localStorage.getItem("mycourses"));
+
+var storage = JSON.parse(localStorage.getItem("data"));
 
 if (storage !== null) {
-    myCourses = JSON.parse(localStorage.getItem("mycourses"));
+    var myCourses = JSON.parse(localStorage.getItem("data"));
     console.log(myCourses);
 }
 

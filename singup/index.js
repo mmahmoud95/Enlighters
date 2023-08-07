@@ -92,9 +92,11 @@ submit.addEventListener('click', function () {
     console.log(objectLength);
     if (objectLength === 5) {
         data.users.push(current_user);
+        
         console.log(data.users);
         // console.log(current_user);
         // var dataJSON = JSON.stringify(data);
         localStorage.setItem('data', JSON.stringify(data)); //override
     }
 });
+

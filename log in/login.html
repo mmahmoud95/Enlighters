@@ -115,11 +115,12 @@
 
       function onSubmit(e){
         e.preventDefault();
-        var user = data.users.find((user)=> user.email === username.value&& user.password === pass.value);
+        var user = data.users.find((user)=> user.email === username.value && user.password === pass.value);
         
         if(user){
             data.current_user = user.id
             console.log('authorized')
+            localStorage.setItem("data", JSON.stringify(data))
             // fix the url to redirect to mycourses page
             window.location.href = `../course/course.html?id=${user.id}`;
         }

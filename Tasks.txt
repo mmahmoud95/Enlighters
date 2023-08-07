@@ -17,10 +17,10 @@
 //in progress ................
 - validating the Profile page >> Mahmoud >>> in Progress ................
 - building footer >> Mostafa >>> in progress ................
-- activating Enroll logic and add the Enrolled course to the user courses >>  aya & sara >> inprogress
+- activating Enroll logic and add the Enrolled course to the user courses >>  Mostafa >> inprogress
+- linking user data to my courses page >> mostafa
 
 //unassigned
-- linking user data to my courses page >> mostafa
 - activating search logic in my courses Page >> mostafa
 - activating search logic in Home Page >> mahmoud
 - building settings Page >> mahmoud
