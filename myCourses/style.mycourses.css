@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#container {
+    padding: 100px;
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+h1 {
+    width: 300px;
+    font-size: 36px;
+    color: #490958;
+    border-bottom: #490958 3px solid;
+    padding-top: 80px;
+    margin-left: 60px;
+}
+
+#container div {
+    width: 33.333333%;
+    padding: 16px;
+}
+
+#container div img {
+    width: 300px;
+    height: 150px;
+}
+
+#container .course-name {
+    color: rgb(100, 100, 100);
+}
+#container h2 {
+    font-size: 16px;
+}
+#container .no-courses {
+    font-size: 24px;
+    font-weight: bold;
+}

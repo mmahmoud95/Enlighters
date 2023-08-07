@@ -2,49 +2,50 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link href="course.css" rel="stylesheet" />
         <link href="../styles.css" rel="stylesheet" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            rel="icon"
-            type="image/x-icon"
-            href="/Assets/graduation-hat.png"
-        />
-        <title>Enlighters</title>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Calligraffitti&family=Indie+Flower&family=Roboto:wght@300;400&display=swap"
-            rel="stylesheet"
-        />
-        <title>Document</title>
+        <link href="./style.mycourses.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>My Courses</title>
     </head>
     <body>
-        <nav>
-            <p>Enlighters.com</p>
-            <ul>
-                <li>
-                    <a href="../">Home</a>
-                </li>
-                <li>
-                    <a href="../myCourses/index.html">My Courses</a>
-                </li>
-                <li>
-                    <a href="#">Exams</a>
-                </li>
-                <li>
-                    <a href="../about us/about-us.html">about us</a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="../Assets/man.png" />
+        <header>
+            <nav>
+                <div id="user">
+                    <a href="./profile page/index.html">
+                        <i class="fa-solid fa-circle-user"></i> Profile
                     </a>
-                </li>
-            </ul>
-        </nav>
-        <main>
-            <div id="course"></div>
-        </main>
+                    <a href="./settings page/index.html">
+                        <i class="fa-solid fa-gear"></i> Settings
+                    </a>
+                    <a href="#">
+                        <i class="fa-solid fa-right-from-bracket"></i> Log out
+                    </a>
+                </div>
+                <p id="logo">Enlighters.com</p>
+                <ul>
+                    <li>
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">My Courses</a>
+                    </li>
+                    <li>
+                        <a href="./log in/login.html">Exams</a>
+                    </li>
+                    <li>
+                        <a href="../about us/about-us.html">about us</a>
+                    </li>
+                    <li>
+                        <div id="user_icon" href="#">
+                            <img src="../Assets/man.png" />
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <h1>My Courses</h1>
+        <div id="container"></div>
+
         <!------------------Footer----------------------->
         <footer>
             <div class="footer-container">
@@ -105,10 +106,14 @@
                 </p>
             </div>
         </footer>
-        <script src="course-script.js" type="module"></script>
         <script
-            src="https://kit.fontawesome.com/f6798b3fdf.js"
-            crossorigin="anonymous"
+            type="module"
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
         ></script>
+        <script
+            nomodule
+            src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+        ></script>
+        <script src="./script.js" type="module"></script>
     </body>
 </html>
