@@ -84,7 +84,7 @@
             <input type="password" name="pass" id="pass" placeholder="passwords" reuired>
             <br>
             <!-- <input type="submit" class="submit" value="Log in" > -->
-            <button id="submit"> Log in</button>
+            <button type="submit" id="submit"> Log in</button>
             <br>
 
             <span id="s"> Don't have an account?
@@ -96,60 +96,29 @@
         </form>
     </div>
     </div>
+
     <script>
-
-        var submit = document.getElementById("submit");
-
-        submit.addEventListener('click', function () {
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("pass").value;
-            var patternUser = /^[A-Za-z]{3,}$/;
-            var patternEmail = /^[A-Za-z]{3,}@[a-z]{5,}(.com)$/;
-
-            // var test = patternUser.test(userName);
-            if (patternUser.test(userName) == true) {
-                document.getElementById("username").style.border = "3px solid green";
-
-         
+        var username = document.getElementById("username");
+        var password = document.getElementById("pass");
+        var patternUser = /^[A-Za-z]{3,}/;
+        var patternEmail = /^[A-Za-z]{3,}@[a-z]{5,}(.com)/;
+        var patternPass = /[A-Za-z0-9]{3,}/;
 
 
-
-        // var submit = document.getElementById("submit");
-        // function val(e) {
-        //     e.preventDefault();
-        //     console.log('sd')
-            
-        //     // var test = patternUser.test(userName);
-        //     if (patternUser.test(userName)) {
-        //         username.style.border = "3px solid green";
-
-        //     }
-        //     else {
-        //         username.style.border = "3px solid red";
-
-        //     }
-
-            // var patternPass = /[A-Za-z0-9]{3,}$/;
-        //     var test = patternPass.test(password);
-        //     if (test !== true) {
-        //         document.getElementById("pass").style.border = "3px solid red";
-        //     }
-        //     else {
-        //         document.getElementById("pass").style.border = "3px solid green";
-
-        //     }
-        // }
+        username.onchange = function (event) {
+            if (!patternUser.test(event.target.value)) {
+                username.style.border = '1px solid red'
+            } else {
+                username.style.border = '1px solid green'
             }
-        });
-        // var data_user = { username: "ahmed", passworg: 12 };
-        // var dataJSON = JSON.stringify(data_user);
-        // localStorage.setItem('user_data', dataJSON);
-        // console.log(data_user);
-        // var users_data = localStorage.getItem('users_data').data_user
-        // console.log(users_data);
-
-
-
+        }
+        password.onchange = function (event) {
+            if (!patternPass.test(event.target.value)) {
+                password.style.border = '1px solid red'
+            } else {
+                password.style.border = '1px solid green'
+            }
+        }
     </script>
 </body>
 
