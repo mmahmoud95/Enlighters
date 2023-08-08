@@ -13,69 +13,69 @@ var rePassword = document.getElementById("rePassword");
 
 // Create events
 Name.onchange = function () {
-  if (!namePattern.test(Name.value)) {
-    Name.style.border = "1px solid red";
-  } else {
-    Name.style.border = "1px solid green";
-  }
+    if (!namePattern.test(Name.value)) {
+        Name.style.border = "1px solid red";
+    } else {
+        Name.style.border = "1px solid green";
+    }
 };
 
 userName.onchange = function () {
-  if (!userPattern.test(userName.value)) {
-    userName.style.border = "1px solid red";
-  } else {
-    userName.style.border = "1px solid green";
-  }
+    if (!userPattern.test(userName.value)) {
+        userName.style.border = "1px solid red";
+    } else {
+        userName.style.border = "1px solid green";
+    }
 };
 
 Email.onchange = function () {
-  if (!userEmail.test(Email.value)) {
-    Email.style.border = "1px solid red";
-  } else {
-    Email.style.border = "1px solid green";
-  }
+    if (!userEmail.test(Email.value)) {
+        Email.style.border = "1px solid red";
+    } else {
+        Email.style.border = "1px solid green";
+    }
 };
 Password.onchange = function () {
-  if (!passwordPattern.test(Password.value)) {
-    Password.style.border = "1px solid red";
-  } else {
-    Password.style.border = "1px solid green";
-  }
+    if (!passwordPattern.test(Password.value)) {
+        Password.style.border = "1px solid red";
+    } else {
+        Password.style.border = "1px solid green";
+    }
 };
 
 // hold the local storage
 
 submit.onclick = function () {
-  var DummyData = {
-    users: [],
-    current_user: 0,
-  };
-  var data = JSON.parse(localStorage.getItem("data")) || DummyData;
+    var DummyData = {
+        users: [],
+        current_user: 0,
+    };
+    var data = JSON.parse(localStorage.getItem("data")) || DummyData;
 
-  var current_user = {
-    id: 0,
-    fullName: "",
-    userName: "",
-    email: "",
-    password: "",
-    courses: [],
-  };
+    var current_user = {
+        id: 0,
+        fullName: "",
+        userName: "",
+        email: "",
+        password: "",
+        courses: [],
+    };
 
-  var id = Math.round(Math.random() * 200);
+    var id = Math.round(Math.random() * 200);
 
-  current_user.id = id;
-  current_user.fullName = Name.value;
-  current_user.userName = userName.value;
-  current_user.email = Email.value;
-  current_user.password = Password.value;
-  data.users.push(current_user);
-  if (
-    namePattern.test(Name.value) &&
-    userPattern.test(userName.value) &&
-    userEmail.test(Email.value) &&
-    passwordPattern.test(Password.value)
-  ) {
-    console.log("done");
-    localStorage.setItem("data", JSON.stringify(data)); //override
-  }
+    current_user.id = id;
+    current_user.fullName = Name.value;
+    current_user.userName = userName.value;
+    current_user.email = Email.value;
+    current_user.password = Password.value;
+    data.users.push(current_user);
+    if (
+        namePattern.test(Name.value) &&
+        userPattern.test(userName.value) &&
+        userEmail.test(Email.value) &&
+        passwordPattern.test(Password.value)
+    ) {
+        console.log("done");
+        localStorage.setItem("data", JSON.stringify(data)); //override
+    }
 };
