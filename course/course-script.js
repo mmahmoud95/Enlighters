@@ -25,6 +25,7 @@ courseContainer.innerHTML = `
 `;
 
 var enroll = document.getElementById("enroll");
+
 enroll.addEventListener("click", () => {
     var data = JSON.parse(localStorage.getItem("data"))
     var currentuserID =  data.current_user
@@ -46,4 +47,4 @@ if (storage !== null) {
     console.log(myCourses);
 }
 
-export default myCourses;
+

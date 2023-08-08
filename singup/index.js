@@ -1,92 +1,81 @@
 var submit = document.getElementById("submit");
 
-var DummyData = {
-    users: [
+// Create pattern
+var Name = document.getElementById("name");
+var namePattern = /^[A-za-z]{3,}(\s)[A-Za-z]/;
+var userName = document.getElementById("user");
+var userPattern = /^[A-za-z]{3,}/;
+var Email = document.getElementById("email");
+var userEmail = /^[A-za-z0-9_.]{3,}(@)[A-Za-z]{3,}(.com)/;
+var Password = document.getElementById("password");
+var passwordPattern = /[A-Za-z0-9]{8,}/;
+var rePassword = document.getElementById("rePassword");
 
-    ],
-    current_user: 0
-}
+// Create events
+Name.onchange = function () {
+  if (!namePattern.test(Name.value)) {
+    Name.style.border = "1px solid red";
+  } else {
+    Name.style.border = "1px solid green";
+  }
+};
 
-// hold the local storage 
-var data = JSON.parse(localStorage.getItem("data")) || DummyData;
+userName.onchange = function () {
+  if (!userPattern.test(userName.value)) {
+    userName.style.border = "1px solid red";
+  } else {
+    userName.style.border = "1px solid green";
+  }
+};
 
-console.log(data)
+Email.onchange = function () {
+  if (!userEmail.test(Email.value)) {
+    Email.style.border = "1px solid red";
+  } else {
+    Email.style.border = "1px solid green";
+  }
+};
+Password.onchange = function () {
+  if (!passwordPattern.test(Password.value)) {
+    Password.style.border = "1px solid red";
+  } else {
+    Password.style.border = "1px solid green";
+  }
+};
 
-function onSubmit(e) {
-    e.preventDefault();
-    var current_user = {
-        
-    }
-    var Name = document.getElementById("name").value;
-    var userName = document.getElementById("user").value
-    var Email = document.getElementById("email").value;
-    var Password = document.getElementById("password").value;
-    var rePassword = document.getElementById("rePassword").value;
+// hold the local storage
 
+submit.onclick = function () {
+  var DummyData = {
+    users: [],
+    current_user: 0,
+  };
+  var data = JSON.parse(localStorage.getItem("data")) || DummyData;
 
-    var patternName = /^([A-Za-z]){3,}\s([A-Za-z]{3,})/;
-    var test = patternName.test(Name);
+  var current_user = {
+    id: 0,
+    fullName: "",
+    userName: "",
+    email: "",
+    password: "",
+    courses: [],
+  };
 
-    if (test !== true) {
-        console.log('valid')
-        document.getElementById("name").style.border = "1px solid red";
-    }
+  var id = Math.round(Math.random() * 200);
 
-    else {
-
-        document.getElementById("name").style.border = "1px solid green";
-        current_user.id = parseInt(Math.random() * 1000);
-        current_user.fullName = Name;
-    }
-    var patternUser = /[A-Za-z._@#$%&*0-9]{3,}/i
-    var test = patternUser.test(userName);
-    if (test !== true) {
-        document.getElementById("user").style.border = "1px solid red";
-    }
-    else {
-        document.getElementById("user").style.border = "1px solid green";
-        current_user.userName = userName;
-    }
-    var patternEmail = /^[A-Za-z0-9_.]{3,}@[A-Za-z]+(\.com)$/;
-    var test = patternEmail.test(Email);
-    if (test !== true) {
-        document.getElementById("email").style.border = "1px solid red";
-    }
-    else {
-        document.getElementById("email").style.border = "1px solid green";
-        current_user.email = Email;
-    }
-
-    var patternPass = /[A-Za-z0-9._@#$%&*]{8,}$/;
-    var test = patternPass.test(Password);
-    if (test !== true) {
-        document.getElementById("password").style.border = "1px solid red";
-    }
-
-    else {
-        document.getElementById("password").style.border = "1px solid green";
-        current_user.password = Password;
-        //alert(Password);
-    }
-
-    if (rePassword === "") {
-        document.getElementById("rePassword").style.border = "1px solid red";
-    } else if (rePassword !== Password) {
-        document.getElementById("rePassword").style.border = "1px solid red";
-    } else {
-        document.getElementById("rePassword").style.border = "1px solid green";
-    }
-
-    var objectLength = Object.keys(current_user).length;
-    console.log(objectLength);
-    if (objectLength === 5) {
-        data.users.push(current_user);
-
-        console.log(data.users);
-        // console.log(current_user);
-        // var dataJSON = JSON.stringify(data);
-        localStorage.setItem('data', JSON.stringify(data)); //override
-    }
-
-}
-
+  current_user.id = id;
+  current_user.fullName = Name.value;
+  current_user.userName = userName.value;
+  current_user.email = Email.value;
+  current_user.password = Password.value;
+  data.users.push(current_user);
+  if (
+    namePattern.test(Name.value) &&
+    userPattern.test(userName.value) &&
+    userEmail.test(Email.value) &&
+    passwordPattern.test(Password.value)
+  ) {
+    console.log("done");
+    localStorage.setItem("data", JSON.stringify(data)); //override
+  }
+};

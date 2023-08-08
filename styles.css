@@ -488,7 +488,3 @@ mark{
 #topping:hover{
     opacity: .7;
 }
-
-header:hover #user_icon{
-    display: none;
-}

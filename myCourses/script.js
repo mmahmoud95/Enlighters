@@ -5,7 +5,7 @@ var courseCard;
 var myCourses;
 var storage = JSON.parse(localStorage.getItem("mycourses"));
 if (storage !== null) {
-    myCourses = JSON.parse(localStorage.getItem("mycourses"));
+    myCourses = JSON.parse(localStorage.getItem("data")).courses;
     for (const i in myCourses) {
         console.log(myCourses);
         courseCard = document.createElement("div");

@@ -99,51 +99,42 @@
     <script>
 
         var submit = document.getElementById("submit");
-
-        submit.addEventListener('click', function () {
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("pass").value;
-            var patternUser = /^[A-Za-z]{3,}$/;
-            var patternEmail = /^[A-Za-z]{3,}@[a-z]{5,}(.com)$/;
+        var data = JSON.parse(localStorage.getItem("data"));
+        var username = document.getElementById("username");
+        var password = document.getElementById("pass");
+        var patternPass =  /[A-Za-z0-9]{8,}/;
+        var patternEmail = /^[A-za-z0-9_.]{3,}(@)[A-Za-z]{3,}(.com)/;
 
             // var test = patternUser.test(userName);
-            if (patternUser.test(userName) == true) {
-                document.getElementById("username").style.border = "3px solid green";
-
-
-        // var submit = document.getElementById("submit");
-        // function val(e) {
-        //     e.preventDefault();
-        //     console.log('sd')
-
-        //     // var test = patternUser.test(userName);
-        //     if (patternUser.test(userName)) {
-        //         username.style.border = "3px solid green";
-
-        //     }
-        //     else {
-        //         username.style.border = "3px solid red";
-
-        //     }
-
-            // var patternPass = /[A-Za-z0-9]{3,}$/;
-        //     var test = patternPass.test(password);
-        //     if (test !== true) {
-        //         document.getElementById("pass").style.border = "3px solid red";
-        //     }
-        //     else {
-        //         document.getElementById("pass").style.border = "3px solid green";
-
-        //     }
-        // }
+    
+      
+        username.onchange = function (event) {
+            if (!patternEmail.test(event.target.value)) {
+                username.style.border = '1px solid red'
+            } else {
+                username.style.border = '1px solid green'
             }
-        })
+        }
         password.onchange = function (event) {
             if (!patternPass.test(event.target.value)) {
                 password.style.border = '1px solid red'
             } else {
                 password.style.border = '1px solid green'
             }
+        }
+
+        function onSubmit(event) {
+            event.preventDefault();
+            var user = data.users.find((user)=> user.email===username.value && user.password===password.value)
+
+            if (user){
+                console.log('authentication')
+                data.current_user = user.id
+                localStorage.setItem("data", JSON.stringify(data))
+                window.location.href = "../index.html"
+            }else{
+                alert('email is not in our database!')
+                }
         }
     </script>
 </body>
