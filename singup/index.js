@@ -40,7 +40,6 @@ submit.addEventListener('click', function () {
         document.getElementById("user").style.border = "1px solid green";
         data_user.userName = userName;
     }
-
     var patternEmail = /^[A-Za-z0-9_.]{3,}@[A-Za-z]+(\.com)$/;
     var test = patternEmail.test(Email);
     if (test !== true) {
