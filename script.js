@@ -2,7 +2,7 @@ const coursesContainer = document.getElementById("courses");
 const categories = []; // holds all the categories
 const categoriesOptions = document.getElementById("categories");
 const categoriesFilter = [];
-const search_Course=document.getElementById('search_Course');
+const search_Course = document.getElementById("search_Course");
 
 // this function below to minimize duplicatation of creating cards
 
@@ -94,12 +94,10 @@ user_icon.onclick = function disp() {
   dropDown.style.display = dropDown.style.display != "flex" ? "flex" : "none";
 };
 
-
-
 //*********************** */
 //start the Part of search
 
-search_Course.addEventListener('keyup',function(course){
+search_Course.addEventListener("keyup", function (course) {
   search_Course.onkeyup = (e) => {
     coursesContainer.innerHTML = "";
     let searchValue = e.target.value;
@@ -109,78 +107,27 @@ search_Course.addEventListener('keyup',function(course){
         createCards(course);
       });
     }
-    const filteredCategory = categoriesFilter.filter(
-      (category) => {
-        if(category.name.includes(searchValue)){
-          let pr=searchValue.trim();
-          console.log(pr);
-          let re=new RegExp(pr)
+    const filteredCategory = categoriesFilter.filter((category) => {
+      if (category.name.includes(searchValue)) {
+        let pr = searchValue.trim();
+        console.log(pr);
+        let re = new RegExp(pr);
         // console.log(category.name);
-        
+
         console.log(re);
-        let res=category.name.replace(re,`<mark>${pr}</mark>`);
-       let t1=toString(category.name)
-          
-         console.log(typeof t1);
-        return `<mark>${t1}</mark>`
-             
-        }
-      });
+        let res = category.name.replace(re, `<mark>${pr}</mark>`);
+        let t1 = toString(category.name);
+
+        console.log(typeof t1);
+        return `<mark>${t1}</mark>`;
+      }
+    });
     filteredCategory.map((courses) => {
-    // courses=courses.toLowerCase()
+      // courses=courses.toLowerCase()
       createCards(courses);
     });
   };
-})
+});
 console.log(categoriesFilter);
 
 // end the part of search
-
-
-// Start the part of profile page 
-// let Profile_Page=document.getElementById('Profile_Page');
-let container=document.getElementById('container')
-console.log(container);
-let list_Obj=[];
-let trs=``;
-Profile_Page.addEventListener('load',function(){
-  if(localStorage.getItem('data')===null){
-    list_Obj=[];
-    
-  }else{
-    list_Obj=JSON.parse(localStorage.getItem('data'));
-  }
-
-  if(list_Obj.current_user !=0 ){
-    
-    console.log('hiii');
-    list_Obj.useres
-  // list_Obj./current_user = user.id
-    console.log('authorized')
-    trs+=`
-    <form action="" method="post">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="fname" disabled vlaue='${user.name}'/>
-    <br />
-    <label for="Lname">Last Name</label>
-    <input type="text" id="Lname" name="lname" value= '${user.name}'/>
-    <br />
-    <label for="age">Age</label>
-    <input type="number" id="age" name="age" value="25" />
-    <br />
-    <label for="edu">Education</label>
-    <input type="text" id="edu" name="edu" value='Backlory of medicine' />
-    <br />
-    <label for="university">University</label>
-    <input type="text" id="university" name="university" value='Suhaj' />
-    <br />
-  </form>`;
-  console.log('hi from end profile');
-container.innerHTML=trs;
-}
-  
-})
-
-
-// end the part of profile page
-

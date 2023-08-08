@@ -14,12 +14,9 @@ console.log(data)
 
 function onSubmit(e) {
     e.preventDefault();
-}
-submit.addEventListener('blur', function () {
-
     var current_user = {
+        
     }
-
     var Name = document.getElementById("name").value;
     var userName = document.getElementById("user").value
     var Email = document.getElementById("email").value;
@@ -27,9 +24,11 @@ submit.addEventListener('blur', function () {
     var rePassword = document.getElementById("rePassword").value;
 
 
-    var patternName = /^[A-Za-z]{3,}(\s[A-Za-z]{3,})+$/i;
+    var patternName = /^([A-Za-z]){3,}\s([A-Za-z]{3,})/;
     var test = patternName.test(Name);
+
     if (test !== true) {
+        console.log('valid')
         document.getElementById("name").style.border = "1px solid red";
     }
 
@@ -39,7 +38,6 @@ submit.addEventListener('blur', function () {
         current_user.id = parseInt(Math.random() * 1000);
         current_user.fullName = Name;
     }
-
     var patternUser = /[A-Za-z._@#$%&*0-9]{3,}/i
     var test = patternUser.test(userName);
     if (test !== true) {
@@ -89,5 +87,6 @@ submit.addEventListener('blur', function () {
         // var dataJSON = JSON.stringify(data);
         localStorage.setItem('data', JSON.stringify(data)); //override
     }
-});
+
+}
 
