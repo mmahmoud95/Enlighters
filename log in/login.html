@@ -75,7 +75,7 @@
         <div id="i">
             <img src="../Assets/welcome2.png" height="500" width="500">
         </div>
-        <form id="form1" onsubmit="val(e)">
+        <form id="form1" onsubmit="onSubmit(event)">
             <legend>welcome to <span id="s1">Enlighters.com</span></legend>
             <br>
             <input type="text" name="username" id="username" placeholder="username or E-mail" reuired>
@@ -84,19 +84,33 @@
             <input type="password" name="pass" id="pass" placeholder="passwords" reuired>
             <br>
             <!-- <input type="submit" class="submit" value="Log in" > -->
-            <button id="submit"> Log in</button>
+            <button type="submit" id="submit"> Log in</button>
             <br>
 
             <span id="s"> Don't have an account?
                 <a href="../singup/index.html">
                     Sign Up
-
                 </a>
             </span>
         </form>
     </div>
     </div>
+
     <script>
+<<<<<<< HEAD
+        var username = document.getElementById("username");
+        var password = document.getElementById("pass");
+        var patternUser = /^[A-Za-z]{3,}/;
+        var patternEmail = /^[A-Za-z]{3,}@[a-z]{5,}(.com)/;
+        var patternPass = /[A-Za-z0-9]{3,}/;
+
+
+        username.onchange = function (event) {
+            if (!patternUser.test(event.target.value)) {
+                username.style.border = '1px solid red'
+            } else {
+                username.style.border = '1px solid green'
+=======
 
         var submit = document.getElementById("submit");
 
@@ -115,7 +129,7 @@
         // function val(e) {
         //     e.preventDefault();
         //     console.log('sd')
-            
+
         //     // var test = patternUser.test(userName);
         //     if (patternUser.test(userName)) {
         //         username.style.border = "3px solid green";
@@ -136,17 +150,16 @@
 
         //     }
         // }
+>>>>>>> b5e765fa0627c978b44689ad70b3f4798c3d3c40
             }
-        });
-        // var data_user = { username: "ahmed", passworg: 12 };
-        // var dataJSON = JSON.stringify(data_user);
-        // localStorage.setItem('user_data', dataJSON);
-        // console.log(data_user);
-        // var users_data = localStorage.getItem('users_data').data_user
-        // console.log(users_data);
-
-
-
+        }
+        password.onchange = function (event) {
+            if (!patternPass.test(event.target.value)) {
+                password.style.border = '1px solid red'
+            } else {
+                password.style.border = '1px solid green'
+            }
+        }
     </script>
 </body>
 
