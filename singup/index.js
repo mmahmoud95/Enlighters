@@ -1,10 +1,10 @@
 var submit = document.getElementById("submit");
 
 var DummyData = {
-    users:[
+    users: [
 
     ],
-    current_user:0
+    current_user: 0
 }
 
 // hold the local storage 
@@ -12,10 +12,10 @@ var data = JSON.parse(localStorage.getItem("data")) || DummyData;
 
 console.log(data)
 
-function onSubmit(e){
+function onSubmit(e) {
     e.preventDefault();
 }
-submit.addEventListener('click', function () {
+submit.addEventListener('blur', function () {
 
     var current_user = {
     }
@@ -25,14 +25,6 @@ submit.addEventListener('click', function () {
     var Email = document.getElementById("email").value;
     var Password = document.getElementById("password").value;
     var rePassword = document.getElementById("rePassword").value;
-
-    // adding user data to current user
-    // current_user.id = Math.round(Math.random()*300)
-    // current_user.fullName = Name;
-    // current_user.userName = userName;
-    // current_user.email = Email;
-    // current_user.password = Password;
-
 
 
     var patternName = /^[A-Za-z]{3,}(\s[A-Za-z]{3,})+$/i;
@@ -91,7 +83,7 @@ submit.addEventListener('click', function () {
     console.log(objectLength);
     if (objectLength === 5) {
         data.users.push(current_user);
-        
+
         console.log(data.users);
         // console.log(current_user);
         // var dataJSON = JSON.stringify(data);
