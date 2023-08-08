@@ -138,20 +138,24 @@ console.log(categoriesFilter);
 
 
 // Start the part of profile page 
-let Profile_Page=document.getElementById('Profile_Page');
+// let Profile_Page=document.getElementById('Profile_Page');
 let container=document.getElementById('container')
 console.log(container);
 let list_Obj=[];
 let trs=``;
-Profile_Page.addEventListener('click',function(){
+Profile_Page.addEventListener('load',function(){
   if(localStorage.getItem('data')===null){
     list_Obj=[];
+    
   }else{
     list_Obj=JSON.parse(localStorage.getItem('data'));
   }
-  if(user){
+
+  if(list_Obj.current_user !=0 ){
+    
     console.log('hiii');
-    data.current_user = user.id
+    list_Obj.useres
+  // list_Obj./current_user = user.id
     console.log('authorized')
     trs+=`
     <form action="" method="post">

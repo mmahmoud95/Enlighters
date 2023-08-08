@@ -467,3 +467,28 @@ mark{
     background-color: orange;
     font-size: 30px;
 }
+/* ----------------------------------------- */
+#topping {
+    position: fixed;
+    visibility: visible;
+    opacity: 1;
+    right: 15px;
+    bottom: 15px;
+    background: #0078ff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all 0.4s;
+    color: #dadada;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#topping:hover{
+    opacity: .7;
+}
+
+header:hover #user_icon{
+    display: none;
+}
