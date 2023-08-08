@@ -98,8 +98,8 @@ user_icon.onclick = function disp() {
 
 //*********************** */
 //start the Part of search
-search_Course.addEventListener('keyup',function(course){
 
+search_Course.addEventListener('keyup',function(course){
   search_Course.onkeyup = (e) => {
     coursesContainer.innerHTML = "";
     let searchValue = e.target.value;
@@ -110,19 +110,30 @@ search_Course.addEventListener('keyup',function(course){
       });
     }
     const filteredCategory = categoriesFilter.filter(
-      (category) => category.name.includes(searchValue)
-    );
-// for( let i =0 ; i<categoriesFilter.length; i++){
-//   let pr=document.getElementById("search_Course").value.trim();
-//   let re=new RegExp(pr)
-//  categoriesFilter[i].name.replace(re,`<mark>${pr}</mark>`)
-// }   
-    filteredCategory.map((course) => {
-      createCards(course);
+      (category) => {
+        if(category.name.includes(searchValue)){
+          let pr=searchValue.trim();
+          console.log(pr);
+          let re=new RegExp(pr)
+        // console.log(category.name);
+        
+        console.log(re);
+        let res=category.name.replace(re,`<mark>${pr}</mark>`);
+       let t1=toString(category.name)
+          
+         console.log(typeof t1);
+        return `<mark>${t1}</mark>`
+             
+        }
+      });
+    filteredCategory.map((courses) => {
+    // courses=courses.toLowerCase()
+      createCards(courses);
     });
   };
 })
 console.log(categoriesFilter);
+
 // end the part of search
 
 
