@@ -97,35 +97,69 @@
     </div>
 
     <script>
-      
-      var username = document.getElementById("username");
-      var userpattern = /^[A-Za-z0-9_.]{3,}@[A-Za-z]+(\.com)$/
+<<<<<<< HEAD
+        var username = document.getElementById("username");
+        var password = document.getElementById("pass");
+        var patternUser = /^[A-Za-z]{3,}/;
+        var patternEmail = /^[A-Za-z]{3,}@[a-z]{5,}(.com)/;
+        var patternPass = /[A-Za-z0-9]{3,}/;
 
-      var data = JSON.parse(localStorage.getItem("data"));
-    var pass = document.getElementById("pass");
-      username.onblur = function(e){
-        if(!userpattern.test(e.target.value)){
-            username.style.border = "1px solid red"
+
+        username.onchange = function (event) {
+            if (!patternUser.test(event.target.value)) {
+                username.style.border = '1px solid red'
+            } else {
+                username.style.border = '1px solid green'
+=======
+
+        var submit = document.getElementById("submit");
+
+        submit.addEventListener('click', function () {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("pass").value;
+            var patternUser = /^[A-Za-z]{3,}$/;
+            var patternEmail = /^[A-Za-z]{3,}@[a-z]{5,}(.com)$/;
+
+            // var test = patternUser.test(userName);
+            if (patternUser.test(userName) == true) {
+                document.getElementById("username").style.border = "3px solid green";
+
+
+        // var submit = document.getElementById("submit");
+        // function val(e) {
+        //     e.preventDefault();
+        //     console.log('sd')
+
+        //     // var test = patternUser.test(userName);
+        //     if (patternUser.test(userName)) {
+        //         username.style.border = "3px solid green";
+
+        //     }
+        //     else {
+        //         username.style.border = "3px solid red";
+
+        //     }
+
+            // var patternPass = /[A-Za-z0-9]{3,}$/;
+        //     var test = patternPass.test(password);
+        //     if (test !== true) {
+        //         document.getElementById("pass").style.border = "3px solid red";
+        //     }
+        //     else {
+        //         document.getElementById("pass").style.border = "3px solid green";
+
+        //     }
+        // }
+>>>>>>> b5e765fa0627c978b44689ad70b3f4798c3d3c40
+            }
         }
-        else{
-            username.style.border = "1px solid green"
+        password.onchange = function (event) {
+            if (!patternPass.test(event.target.value)) {
+                password.style.border = '1px solid red'
+            } else {
+                password.style.border = '1px solid green'
+            }
         }
-      }
-
-
-      function onSubmit(e){
-        e.preventDefault();
-        var user = data.users.find((user)=> user.email === username.value&& user.password === pass.value);
-        
-        if(user){
-            data.current_user = user.id
-            console.log('authorized')
-            // fix the url to redirect to mycourses page
-            window.location.href = `../course/course.html?id=${user.id}`;
-        }
-      }
-
-
     </script>
 </body>
 
