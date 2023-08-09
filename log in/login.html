@@ -12,22 +12,36 @@
         rel="stylesheet">
     <title>Document</title>
     <style>
-        #i {
+        #container{
+            width:100%;
+            padding :10px;
+            margin:auto;
+            display:flex;
+            flex-direction: row-reverse;
+        }
+        #div1{
+            width:50%;
+            height:100%;
             margin: 40px 50px;
             padding: 50px;
-            text-align: right;
-            float: right;
+            
         }
-
+        #div2{
+            width:50%;
+            height:100%;
+            padding:10px;
+          
+        }
+        /* img{
+            padding:0px 50px 0px 0px;  
+        } */
         #form1 {
             margin: 100px;
-            padding: 100px 50px;
-            text-align: left;
-            float: right;
-            color: rgb(60, 155, 139);
-
+            padding: 100px 40px 100px 80px ;
+            text-align: center;
+            color:  rgb(60, 155, 139);
+           
         }
-
         legend {
             font-family: 'Indie Flower', cursive;
             font-size: 25px;
@@ -43,7 +57,7 @@
         }
 
         input::placeholder {
-            color: rgb(60, 155, 139);
+            color:  rgb(60, 155, 139);
             padding-left: 5px;
 
         }
@@ -58,8 +72,8 @@
 
         #submit {
             text-align: center;
-            margin: 40px;
-            background-color: rgb(60, 155, 139);
+            margin: 15px;
+            background-color:   rgb(60, 155, 139);
             color: white;
             border: none;
             padding: 5px;
@@ -67,14 +81,15 @@
             height: 30px;
             width: 100px;
         }
-    </style>
+        </style>
 </head>
 
 <body>
     <div id="container">
-        <div id="i">
+        <div id="div1">
             <img src="../Assets/welcome2.png" height="500" width="500">
         </div>
+        <div id="div2">
         <form id="form1" onsubmit="onSubmit(event)">
             <legend>welcome to <span id="s1">Enlighters.com</span></legend>
             <br>
