@@ -4,7 +4,7 @@ var DummyData = {
 }
 let trs = ``;
 var data = JSON.parse(localStorage.getItem('data')) || DummyData;
-var man= document.getElementById('man')
+var man= document.querySelector('.man')
 var length = data.users.length
 console.log(length);
 var user_id = data.users.find((user) => user.id === data.current_user)
@@ -14,10 +14,42 @@ console.log(data.current_user);
 // Start the part of profile page 
 let Profile_Page = document.getElementById('Profile_Page');
 let container = document.getElementById('container')
+var trs2=`  <img src="../Assets/man.png" alt="Profile Image" />
+<p>${user_id.fullName}</p>
 
+<div class="interests">
+  <div class="title">
+    <label id="Int_Label">Interests</label>
+  </div>
+  <p>Web Developoment</p>
+  <p>Graphic Designer</p>
+  <p>Degital Markiting</p>
+  <p>Finance</p>
+  <p>UI / UX</p>
+</div>
+<div class="title">
+  <label id="Int_Label">Badges</label>
+</div>
+<div class="badges">
+  <div class="first">
+    <i id="trophy3" class="fa-solid trophy fa-dragon"></i>
+    <i id="trophy4" class="fa-solid trophy fa-handshake-simple"></i>
+    <i id="trophy3" class="fa-solid trophy fa-dragon"></i>
+    <i id="trophy4" class="fa-solid trophy fa-handshake-simple"></i>
+    <i id="trophy3" class="fa-solid trophy fa-dragon"></i>
+  </div>
+
+  <div>
+    <i id="trophy1" class="fa-solid trophy fa-dragon"></i>
+    <i id="trophy2" class="fa-solid trophy fa-handshake-simple"></i>
+    <i id="trophy1" class="fa-solid trophy fa-dragon"></i>
+    <i id="trophy2" class="fa-solid trophy fa-handshake-simple"></i>
+    <i id="trophy1" class="fa-solid trophy fa-dragon"></i>
+  </div>
+</div>`;
   console.log('hi form  qwe');
   if (data.current_user != 0) {
-// man.innerHTML=`<p>User Name</p>`
+man.innerHTML=trs2
     console.log(data);
     console.log('authorized')
     trs = `
