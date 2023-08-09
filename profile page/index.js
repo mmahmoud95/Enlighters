@@ -1,54 +1,49 @@
 var DummyData = {
-    users:[],
-    current_user:0
+  users: [],
+  current_user: 0
 }
+let trs = ``;
 var data = JSON.parse(localStorage.getItem('data')) || DummyData;
-
-var user = data.users.find((user) => user.id === data.current_user)
-
+var man= document.getElementById('man')
+var length = data.users.length
+console.log(length);
+var user_id = data.users.find((user) => user.id === data.current_user)
+console.log(user_id.fullName);
+console.log(data.current_user);
 
 // Start the part of profile page 
-// let Profile_Page=document.getElementById('Profile_Page');
-let container=document.getElementById('container')
-console.log(container);
-let list_Obj=[];
-let trs=``;
-Profile_Page.addEventListener('load',function(){
-  if(localStorage.getItem('data')===null){
-    list_Obj=[];
-    
-  }else{
-    list_Obj=JSON.parse(localStorage.getItem('data'));
-  }
+let Profile_Page = document.getElementById('Profile_Page');
+let container = document.getElementById('container')
 
-  if(list_Obj.current_user !=0 ){
-    
-    console.log('hiii');
-    list_Obj.useres
-  // list_Obj./current_user = user.id
+  console.log('hi form  qwe');
+  if (data.current_user != 0) {
+// man.innerHTML=`<p>User Name</p>`
+    console.log(data);
     console.log('authorized')
-    trs+=`
-    <form action="" method="post">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="fname" disabled vlaue='${user.name}'/>
-    <br />
-    <label for="Lname">Last Name</label>
-    <input type="text" id="Lname" name="lname" value= '${user.name}'/>
-    <br />
-    <label for="age">Age</label>
-    <input type="number" id="age" name="age" value="25" />
-    <br />
-    <label for="edu">Education</label>
-    <input type="text" id="edu" name="edu" value='Backlory of medicine' />
-    <br />
-    <label for="university">University</label>
-    <input type="text" id="university" name="university" value='Suhaj' />
-    <br />
-  </form>`;
-  console.log('hi from end profile');
-container.innerHTML=trs;
-}
-})
+    trs = `
+  <form action="" method="post">
+  <label for="fname">First Name</label>
+  <input type="text" id="fname" name="fname" disabled  value= '${user_id.fullName}'/>
+  <br />
+  <label for="email">E-mail</label>
+  <input type="email" id="email" name="email" disabled value= '${user_id.email}'/>
+  <br />
+  <label for="id">Id</label>
+  <input type="number" id="id" name="id" disabled value='${user_id.id}' />
+  <br />
+  <label for="pass">Password</label>
+  <input type="password" id="pass" name="pass" disabled value='${user_id.password}' />
+  <div class="bton">
+              <button id="btn1">Save</button>
+              <button id="btn2">Reset</button>
+            </div>
+  <br />
+</form>`;
+    console.log('hi from end profile');
+    container.innerHTML = trs;
+    // list_Obj./current_user = user.id
+
+  }
 
 
 // end the part of profile page
