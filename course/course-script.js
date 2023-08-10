@@ -43,4 +43,5 @@ enroll.addEventListener("click", () => {
     myCourses.push(currentCourse.id);
     data.users[userIndex].courses = myCourses;
     localStorage.setItem("data", JSON.stringify(data)); //override
+    alert("your have enrolled now - page redirect to courses page");
 });
