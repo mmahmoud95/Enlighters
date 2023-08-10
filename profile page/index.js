@@ -2,14 +2,21 @@ var DummyData = {
   users: [],
   current_user: 0
 }
+
+var arrList=[];
+if(localStorage.getItem('data_2')==null){
+  arrList=[];
+}else{
+  arrList=JSON.parse(localStorage.getItem('data_2'));
+}
+
 let trs = ``;
+let trs3=``;
 var data = JSON.parse(localStorage.getItem('data')) || DummyData;
 var man= document.querySelector('.man')
 var length = data.users.length
 console.log(length);
 var user_id = data.users.find((user) => user.id === data.current_user)
-console.log(user_id.fullName);
-console.log(data.current_user);
 
 // Start the part of profile page 
 let Profile_Page = document.getElementById('Profile_Page');
@@ -47,8 +54,21 @@ var trs2=`  <img src="../Assets/man.png" alt="Profile Image" />
     <i id="trophy1" class="fa-solid trophy fa-dragon"></i>
   </div>
 </div>`;
+trs3=`<label for="phone" id="phone1"  style="display:none">Phone Number</label>
+<input type="number" id="phone" name="phone" style="display:none" placeholder="Enter your Phone Number"   />
+<br/>
+<label for="edu" id="edu1" style="display:none">Faculty</label>
+<input type="text" id="edu" name="edu" style="display:none" placeholder="enter your faculty"  />`;
   console.log('hi form  qwe');
+  console.log(arrList);
+
   if (data.current_user != 0) {
+    if(arrList.phoneNumber !=null){
+      phoneNumber.style.display="block";
+      education.style.display="block";
+      phoneNumber.setAttribute(disabled)
+      education.setAttribute(disabled)
+    }
 man.innerHTML=trs2
     console.log(data);
     console.log('authorized')
@@ -65,18 +85,60 @@ man.innerHTML=trs2
   <br />
   <label for="pass">Password</label>
   <input type="password" id="pass" name="pass" disabled value='${user_id.password}' />
-  <div class="bton">
-              <button id="btn1">Save</button>
-              <button id="btn2">Reset</button>
-            </div>
+
+  <br/> 
+
+ ${trs3}
+
   <br />
-</form>`;
+</form>
+<div class="bton">
+<button id="btn1">Save</button>
+<button id="btn2">Update</button>
+</div>`;
     console.log('hi from end profile');
-    container.innerHTML = trs;
-    // list_Obj./current_user = user.id
+    container.innerHTML=trs;
 
+  var save=document.getElementById('btn1')  
+  var update=document.getElementById('btn2');
+  var phoneNumber=document.getElementById('phone');
+  var phoneNumber1=document.getElementById('phone1');
+  console.log(phoneNumber.value);
+  var education=document.getElementById('edu');
+  var education1=document.getElementById('edu1');
+
+  update.addEventListener('click',function(){
+      arrList=JSON.parse(localStorage.getItem('data_2'))
+      console.log('nuqweqweqwul');
+      phoneNumber.style.display="block";
+      phoneNumber1.style.display="block";
+      education.style.display="block";
+      education1.style.display="block";
+    console.log(arrList[0].phoneNumber);
+      phoneNumber.value=arrList[0].phoneNumber;
+      education.value=arrList[0].education;
+    
+  })
+
+  save.addEventListener('click',function(){
+    arrList=[]
+    var data_2={
+      phoneNumber:phoneNumber.value,
+      education:education.value,
+    }
+    console.log(data_2);
+    console.log(arrList);
+  arrList.push(data_2);
+  localStorage.setItem('data_2',JSON.stringify(arrList))
+    phoneNumber.value=""
+    education.value=""
+    phoneNumber.style.display='none'
+    phoneNumber1.style.display='none'
+    education.style.display='none'
+    education1.style.display='none'
+
+  })
   }
-
 
 // end the part of profile page
 
