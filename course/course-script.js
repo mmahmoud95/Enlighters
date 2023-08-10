@@ -31,7 +31,7 @@ for (const i in coursesUser) {
     if (coursesUser[i] == currentCourse.id) {
         enroll.classList.add("enrolled");
         enroll.addEventListener("mouseenter", () => {
-            alert("You can not Enroll Again");
+            alert("You can not Enroll Again - Check My Courses page");
         });
         content.nodeValue = "s";
         console.log(content.nodeValue);
@@ -43,5 +43,5 @@ enroll.addEventListener("click", () => {
     myCourses.push(currentCourse.id);
     data.users[userIndex].courses = myCourses;
     localStorage.setItem("data", JSON.stringify(data)); //override
-    alert("your have enrolled now - page redirect to courses page");
+    alert("your have enrolled now - page redirect to My Courses page");
 });
