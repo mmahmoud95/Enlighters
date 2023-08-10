@@ -1,3 +1,10 @@
+var localstorageData = JSON.parse(localStorage.getItem('data')) || {
+  current_user : 0,
+  users:[]
+}
+localStorage.setItem('data', JSON.stringify(localstorageData))
+
+
 const coursesContainer = document.getElementById("courses");
 const categories = []; // holds all the categories
 const categoriesOptions = document.getElementById("categories");
@@ -94,6 +101,26 @@ user_icon.onclick = function disp() {
   dropDown.style.display = dropDown.style.display != "flex" ? "flex" : "none";
 };
 
+
+// log in and out 
+
+var isloggedIn = JSON.parse(localStorage.getItem("data"))
+var register = document.getElementById('Profile_Page')
+var log = document.getElementById('log')
+console.log(isloggedIn)
+if (isloggedIn.current_user === 0){
+    register.innerHTML = `<i  class="fa-solid fa-circle-user"></i> Register`
+    register.setAttribute('href','./singup/index.html')
+    log.innerHTML = `<i class="fa-solid fa-right-to-bracket"></i> Login`
+    log.setAttribute('href','./login/login.html')
+} else {
+  register.innerHTML = `<i  class="fa-solid fa-circle-user"></i> Profile`
+  register.setAttribute('href','./profile page/index.html')
+  log.innerHTML = `<i class="fa-solid fa-right-to-bracket"></i> Logout`
+  log.setAttribute('href','./login/login.html')
+}
+
+
 //*********************** */
 //start the Part of search
 
@@ -131,3 +158,4 @@ search_Course.addEventListener("keyup", function (course) {
 console.log(categoriesFilter);
 
 // end the part of search
+

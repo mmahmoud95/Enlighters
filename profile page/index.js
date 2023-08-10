@@ -142,3 +142,20 @@ man.innerHTML=trs2
 
 // end the part of profile page
 
+
+// log in and out 
+var data = JSON.parse(localStorage.getItem("data"))
+var isloggedIn = data.current_user || 0 
+var register = document.getElementById('Profile_Page')
+var log = document.getElementById('log')
+if (isloggedIn === 0 ){
+    register.innerHTML = `<i  class="fa-solid fa-circle-user"></i> Register`
+    register.setAttribute('href','../singup/index.html')
+    log.innerHTML = `<i class="fa-solid fa-right-to-bracket"></i> Login`
+    log.setAttribute('href','../login/login.html')
+} else {
+  register.innerHTML = `<i  class="fa-solid fa-circle-user"></i> Profile`
+  register.setAttribute('href','./index.html')
+  log.innerHTML = `<i class="fa-solid fa-right-to-bracket"></i> Logout`
+  log.setAttribute('href','../login/login.html')
+}

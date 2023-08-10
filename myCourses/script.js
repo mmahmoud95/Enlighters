@@ -37,3 +37,36 @@ if (data != null) {
     pragraph.className = "no-courses";
     container.appendChild(pragraph);
 }
+
+
+// addition for nav
+
+var logo = document.getElementById("logo");
+
+logo.onclick = function () {
+  window.location.href = "./";
+};
+
+var dropDown = document.getElementById("user");
+var user_icon = document.getElementById("user_icon");
+user_icon.onclick = function disp() {
+  dropDown.style.display = dropDown.style.display != "flex" ? "flex" : "none";
+};
+
+
+// log in and out 
+var data = JSON.parse(localStorage.getItem("data"))
+var isloggedIn = data.current_user || 0 
+var register = document.getElementById('Profile_Page')
+var log = document.getElementById('log')
+if (isloggedIn === 0 ){
+    register.innerHTML = `<i  class="fa-solid fa-circle-user"></i> Register`
+    register.setAttribute('href','../singup/index.html')
+    log.innerHTML = `<i class="fa-solid fa-right-to-bracket"></i> Login`
+    log.setAttribute('href','../login/login.html')
+} else {
+  register.innerHTML = `<i  class="fa-solid fa-circle-user"></i> Profile`
+  register.setAttribute('href','../profile page/index.html')
+  log.innerHTML = `<i class="fa-solid fa-right-to-bracket"></i> Logout`
+  log.setAttribute('href','../login/login.html')
+}
