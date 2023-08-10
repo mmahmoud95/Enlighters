@@ -341,7 +341,7 @@ main {
 .control .search input {
     border: none;
     background-color: white;
-    box-shadow: 2px 2px 2px 2px rgba(230, 28, 230, 0.5);;
+    box-shadow: 1px 1px 2px 0px rgb(58, 6, 58);;
     padding: 0.3rem 0.5rem 0.3rem 2rem;
     border-radius: 10px;
     outline: none;
