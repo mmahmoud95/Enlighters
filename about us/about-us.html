@@ -180,6 +180,12 @@
       };
 
       // log in and out
+      var localstorageData = JSON.parse(localStorage.getItem("data")) || {
+        current_user: 0,
+        users: [],
+      };
+      localStorage.setItem("data", JSON.stringify(localstorageData));
+
       var data = JSON.parse(localStorage.getItem("data"));
       var isloggedIn = data.current_user || 0;
       var register = document.getElementById("Profile_Page");
