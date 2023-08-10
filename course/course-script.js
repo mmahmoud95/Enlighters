@@ -8,7 +8,7 @@ var content = document.createTextNode("Enroll");
 courseContainer.innerHTML = `
         <div class="name">
             <h1>${currentCourse.name}</h1>
-             <form action="../mycourses/index.html">
+             <form action="../myCourses/index.html">
                <button id="enroll" class="enroll-btn" type="submit">${content.nodeValue}</button>
              </form>
         </div>
