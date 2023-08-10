@@ -108,10 +108,10 @@ nav img {
     text-align: center;
     width: 30%;
     height: 82vh;
-    background-color: rgb(240, 237, 233);
+    background-color: rgb(255, 255, 255);
     border-radius: 80px;
     border: none;
-    box-shadow: 2px 2px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 0 5px 0px gray;
   }
   
   .man p{
@@ -269,7 +269,7 @@ nav img {
     background-color: rgb(243, 243, 243);
     border-radius: 80px;
     border: none;
-    box-shadow: 2px 2px 0px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 0 5px 0px gray;
   }
   
   .details #container{
