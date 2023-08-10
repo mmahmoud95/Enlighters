@@ -32,7 +32,7 @@
     cursor: pointer;
 }
 #course .enroll-btn {
-    background-color: rgb(153, 58, 170);
+    background-color: rgb(197, 4, 117);
     color: #eee;
     transition: background-color 1s ease-in-out;
 }
@@ -48,6 +48,6 @@
 #course .enrolled {
     background-color: #693d70;
     color: #eee;
-    cursor: pointer;
-    pointer-events: none;
+    /* cursor: not-allowed; */
+    /* pointer-events: none; */
 }

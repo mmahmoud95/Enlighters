@@ -30,6 +30,9 @@ var enroll = document.getElementById("enroll");
 for (const i in coursesUser) {
     if (coursesUser[i] == currentCourse.id) {
         enroll.classList.add("enrolled");
+        enroll.addEventListener("mouseenter", () => {
+            alert("You can not Enroll Again");
+        });
         content.nodeValue = "s";
         console.log(content.nodeValue);
     }
