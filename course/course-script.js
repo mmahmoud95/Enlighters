@@ -51,8 +51,5 @@ if (data != null && currentuserID != 0) {
 for (const i in myCourses) {
     if (myCourses[i] == currentCourse.id) {
         enroll.classList.add("enrolled");
-        enroll.addEventListener("mouseenter", () => {
-            alert("You can not Enroll Again - Check My Courses page");
-        });
     }
 }
