@@ -62,7 +62,6 @@ submit.onclick = function () {
     };
 
     var id = Math.round(Math.random() * 200);
-
     current_user.id = id;
     current_user.fullName = Name.value;
     current_user.userName = userName.value;
@@ -75,7 +74,12 @@ submit.onclick = function () {
         userEmail.test(Email.value) &&
         passwordPattern.test(Password.value)
     ) {
-        console.log("done");
+        
         localStorage.setItem("data", JSON.stringify(data)); //override
     }
 };
+
+function onSubmit(e){
+    e.preventDefault();
+    window.location.href = `../login/login.html`;
+}

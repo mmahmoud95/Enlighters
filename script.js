@@ -5,9 +5,12 @@ var localstorageData = JSON.parse(localStorage.getItem('data')) || {
 localStorage.setItem('data', JSON.stringify(localstorageData))
 
 
+
 const coursesContainer = document.getElementById("courses");
 const categories = []; // holds all the categories
+
 const categoriesOptions = document.getElementById("categories");
+
 const categoriesFilter = [];
 const search_Course = document.getElementById("search_Course");
 
@@ -50,6 +53,7 @@ xhttp.onload = function () {
 
   response.courses.map((course) => {
     categoriesFilter.push(course);
+
     if (!categories.includes(course.categories)) {
       // push all the categories into the array if not already there
       categories.push(course.categories);
@@ -58,7 +62,6 @@ xhttp.onload = function () {
   });
 
   // Create options from categories
-
   categories.map((category) => {
     let option = document.createElement("option");
     option.value = category;
@@ -70,18 +73,22 @@ xhttp.send();
 
 // ajax ended successfully
 
-// activating the filter  --
+// activating the filter  -- 
+
 categoriesOptions.onchange = (e) => {
-  coursesContainer.innerHTML = "";
+  coursesContainer.innerHTML = ""; // reset 
   let avtiveCategory = e.target.value;
   if (avtiveCategory === "All Courses") {
+
     categoriesFilter.map((course) => {
       createCards(course);
     });
   }
+
   const filteredCategory = categoriesFilter.filter(
     (category) => category.categories === avtiveCategory
   );
+
   filteredCategory.map((course) => {
     createCards(course);
   });
@@ -95,12 +102,13 @@ logo.onclick = function () {
   window.location.href = "./";
 };
 
+
+
 var dropDown = document.getElementById("user");
 var user_icon = document.getElementById("user_icon");
 user_icon.onclick = function disp() {
   dropDown.style.display = dropDown.style.display != "flex" ? "flex" : "none";
 };
-
 
 // log in and out 
 
@@ -122,6 +130,7 @@ if (isloggedIn.current_user === 0){
 
 
 //*********************** */
+// mahmoud 
 //start the Part of search
 
 search_Course.addEventListener("keyup", function (course) {
@@ -140,15 +149,15 @@ search_Course.addEventListener("keyup", function (course) {
         console.log(pr);
         let re = new RegExp(pr);
         // console.log(category.name);
-
         console.log(re);
         let res = category.name.replace(re, `<mark>${pr}</mark>`);
-        let t1 = toString(category.name);
 
+        let t1 = toString(category.name);
         console.log(typeof t1);
         return `<mark>${t1}</mark>`;
       }
     });
+
     filteredCategory.map((courses) => {
       // courses=courses.toLowerCase()
       createCards(courses);
