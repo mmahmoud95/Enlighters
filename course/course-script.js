@@ -54,7 +54,16 @@ for (const i in myCourses) {
     }
 }
 
-
+var logo = document.getElementById("logo");
+logo.onclick = function () {
+  location.href = "../";
+};
+var dropDown = document.getElementById("user");
+var user_icon = document.getElementById("user_icon");
+user_icon.onclick = function disp() {
+  dropDown.style.display =
+    dropDown.style.display != "flex" ? "flex" : "none";
+};
  // log in and out
  var localstorageData = JSON.parse(localStorage.getItem("data")) || {
     current_user: 0,
