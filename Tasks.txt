@@ -1,30 +1,35 @@
+Enlighters - educational platform - Team 4 Project
 
-//Done
-- Design The main theme  >>> Hossam >> Done 
-- build navbar >>> Hossam >> Done
-- build Homepage (cards) >>> Hossam >> Done
-- fetching courses data from JSON file >>> Hossam >> Done
-- building about us Page >>> Mostafa >>> Done
-- building the header in the homePage and animating it >> Mahmoud >>> Done
-- building the Signup page >> Aya >>> Done
-- building the login page >> Sara >>> Done
-- building the Profile page >> Mahmoud >>> Done
-- validating the Signup page >> Aya >>> Done
-- validating the Login page >> sara >>> Done
-- linking signup data to Local storage >>> aya >> done
-- verifying the login data from the Local storage >>> sara >>> done
+rebo link https://github.com/Hossam-elsheikh/Enlighters
+live demo https://hossam-elsheikh.github.io/Enlighters/
 
-//in progress ................
-- validating the Profile page >> Mahmoud >>> in Progress ................
-- building footer >> Mostafa >>> in progress ................
-- activating Enroll logic and add the Enrolled course to the user courses >>  Mostafa >> inprogress
+// notes
+- all pages are connected to each other
+- all data is connected to one object in local storage, and we all set and get data from it
+- current_user in local storage >>  is the current user id signed in, to use later in other pages
+- user trying to login is verified if he's already signed up (saved in local storage)
+
+
+//tasks log
+- Design The main theme  >>> Hossam 
+- build navbar >>> Hossam 
+- build Homepage (cards) >>> Hossam 
+- fetching courses data from JSON file >>> Hossam 
+- building about us Page >>> Mostafa
+- building the header in the homePage and animating it >> Mahmoud
+- building the Signup page >> Aya 
+- building the login page >> Sara 
+- building the Profile page >> Mahmoud 
+- validating the Signup page >> Aya 
+- validating the Login page >> sara 
+- linking signup data to Local storage >>> aya 
+- verifying the login data from the Local storage >>> sara
+- validating the Profile page >> Mahmoud 
+- building footer >> Mostafa 
+- activating Enroll logic and add the Enrolled course to the user courses >>  Mostafa 
 - linking user data to my courses page >> mostafa
-
-//unassigned
-- activating search logic in my courses Page >> mostafa
 - activating search logic in Home Page >> mahmoud
-- building settings Page >> mahmoud
+- login\register switch in navbar >> Hossam
 
 
-//Bonus 
-- Building Exams Page >> 
+
