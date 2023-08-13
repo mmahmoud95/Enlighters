@@ -196,6 +196,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 nav {
     background-color: rgb(110, 56, 119);
